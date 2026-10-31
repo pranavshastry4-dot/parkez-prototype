@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#05070B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ParkEz">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAE7klEQVR4nO3dMW7bSBiGYTlI73KL3IBNTrEnWmCb1GkWyIl8CjW8QYot9wResFAc25JMSuQM55vnAdwIiiQ4r38POTL1cNiZr9+en2u/BuY7fn94OOxI1Rcj3kzHipEXf2IR9+VYOO5iTybkvh0Lhb35kwiZkmFv9uBCpkbYqz+okKkZ9qc1H0zM1G5mlZ8OIbOXaX33hBYza1mjpbuCFjNru7epm4MWM1u5p62bghYzW7u1scVBi5lSbmltUdBiprSlzc0OWszUsqS9WUGLmdrmNvhh0GJmL+a0uOrWN9R2NWjTmb35qMmLQYuZvbrWpiUHUc4GbTqzd5caNaGJ8i5o05lWnGvVhCbKq6BNZ1rztlkTmii/gjadadXv7X4+NGr88XhINPz1X+2X0DRLDvKCttygdaeGTWiiCJoogiaKoInyyQEhKaaWTWiiCJooze4Upjq3A2r3cD5BN0Dk8wk6IHIT/IU1dEjcqW/WWkrQQUZhCzrR2HHYJnSwscOoBR1u7CxqQXdg7GgJIuiOjB1ELejOjOFRC7pDY3DUdgrfqLnrVjK08cdj5A6jCd2xMXBSC5oogu7cGDalBc0hKWpBExW1oIkiaKKmtKCJImiiprSdwh15u3PXelw1mNA7D/z0VdLY8A+SoBtRI+wWCboxor5O0A0qEfXY6LJD0I0yqc8TdMNE/Z6giSLoxpnSrwmaqANDQRNF0AEsO14ImiiCJoqgiSJoogiaKIImiqADtLgBshVBE0XQRG3YCLpxlhuvCZoogm6Y6fyeoBsl5vME3aASMQ8NHhBOBN0Yk/k6lwJrhJDnEfSO1Yp4aHS5MRH0jpjC97OGJmY6TwRNFEETM50ngiaKoImZzhNBc0iJeSLozg1BMU8ETRRBd2wIm84TQXdqCIx5Yuu7w+3nITTmiQndmSE45omgOzKExzyx5OjA0EHIJyZ0uKGjmCeCDjZ0FvPEkiPQ0GHIJ4IOMnQc8omgAwj5haAbJeLzBN0A8c4n6J0R732ctiOKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJYuv7DVvPbTOhiSJoogiaKIImiqCJImiiCJoogiaKoIkiaKIImijey8FiT3+fv/3Pfw7VCZq7Ir50n1pxW3KwSsxr/Js1CJrNwqwRtaDZNMjSUQuazUMsGbWguSnAL388vvraS9TOcrDIpXhPt//8t+6nCHQRdO1vcoovMybxdJ+a3+9Px+8PD9Wena48bbzsmFq2hma16XzLfdcmaKIImijNHhS6IAwXJ7QDQz6y5MxFjbMcp4YtOSimxDvwBM2qk7f2Of9fQVt2MMcU7LloL91ewu/tNntQuMQe/pIibRPk58J4S/0fvFpymNJsEeCWMb9t1hqaTUMs/dvxXdCmNGsFuXXM51o1odkkzFrHLRffaff12/Nz2ZdCK552cBmDSyuJLs5y0M9Zo4tLDmtp9upam1fX0KJmbz5q0kEhUT4M2pRmL+a0OGtCi5ra5jY4e8khampZ0t6iNbSoKW1pc4sPCkVNKbe0dtNZDlGztVsbu/m0najZyj1t3XUeWtSs7d6m7t5YETVrWaOlVa9r5x161B6Kq259m9bUbmazK4+a1tQYfptfSlfYlPwtXuza0MLu27HQdciLX+xc2H05Fr6gftWr94s707Hip0Ls7uMoRN6W484+0uR/ptqLQ6bi5NcAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAE7klEQVR4nO3dMW7bSBiGYTlI73KL3IBNTrEnWmCb1GkWyIl8CjW8QYot9wResFAc25JMSuQM55vnAdwIiiQ4r38POTL1cNiZr9+en2u/BuY7fn94OOxI1Rcj3kzHipEXf2IR9+VYOO5iTybkvh0Lhb35kwiZkmFv9uBCpkbYqz+okKkZ9qc1H0zM1G5mlZ8OIbOXaX33hBYza1mjpbuCFjNru7epm4MWM1u5p62bghYzW7u1scVBi5lSbmltUdBiprSlzc0OWszUsqS9WUGLmdrmNvhh0GJmL+a0uOrWN9R2NWjTmb35qMmLQYuZvbrWpiUHUc4GbTqzd5caNaGJ8i5o05lWnGvVhCbKq6BNZ1rztlkTmii/gjadadXv7X4+NGr88XhINPz1X+2X0DRLDvKCttygdaeGTWiiCJoogiaKoInyyQEhKaaWTWiiCJooze4Upjq3A2r3cD5BN0Dk8wk6IHIT/IU1dEjcqW/WWkrQQUZhCzrR2HHYJnSwscOoBR1u7CxqQXdg7GgJIuiOjB1ELejOjOFRC7pDY3DUdgrfqLnrVjK08cdj5A6jCd2xMXBSC5oogu7cGDalBc0hKWpBExW1oIkiaKKmtKCJImiiprSdwh15u3PXelw1mNA7D/z0VdLY8A+SoBtRI+wWCboxor5O0A0qEfXY6LJD0I0yqc8TdMNE/Z6giSLoxpnSrwmaqANDQRNF0AEsO14ImiiCJoqgiSJoogiaKIImiqADtLgBshVBE0XQRG3YCLpxlhuvCZoogm6Y6fyeoBsl5vME3aASMQ8NHhBOBN0Yk/k6lwJrhJDnEfSO1Yp4aHS5MRH0jpjC97OGJmY6TwRNFEETM50ngiaKoImZzhNBc0iJeSLozg1BMU8ETRRBd2wIm84TQXdqCIx5Yuu7w+3nITTmiQndmSE45omgOzKExzyx5OjA0EHIJyZ0uKGjmCeCDjZ0FvPEkiPQ0GHIJ4IOMnQc8omgAwj5haAbJeLzBN0A8c4n6J0R732ctiOKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJYuv7DVvPbTOhiSJoogiaKIImiqCJImiiCJoogiaKoIkiaKIImijey8FiT3+fv/3Pfw7VCZq7Ir50n1pxW3KwSsxr/Js1CJrNwqwRtaDZNMjSUQuazUMsGbWguSnAL388vvraS9TOcrDIpXhPt//8t+6nCHQRdO1vcoovMybxdJ+a3+9Px+8PD9Wena48bbzsmFq2hma16XzLfdcmaKIImijNHhS6IAwXJ7QDQz6y5MxFjbMcp4YtOSimxDvwBM2qk7f2Of9fQVt2MMcU7LloL91ewu/tNntQuMQe/pIibRPk58J4S/0fvFpymNJsEeCWMb9t1hqaTUMs/dvxXdCmNGsFuXXM51o1odkkzFrHLRffaff12/Nz2ZdCK552cBmDSyuJLs5y0M9Zo4tLDmtp9upam1fX0KJmbz5q0kEhUT4M2pRmL+a0OGtCi5ra5jY4e8khampZ0t6iNbSoKW1pc4sPCkVNKbe0dtNZDlGztVsbu/m0najZyj1t3XUeWtSs7d6m7t5YETVrWaOlVa9r5x161B6Kq259m9bUbmazK4+a1tQYfptfSlfYlPwtXuza0MLu27HQdciLX+xc2H05Fr6gftWr94s707Hip0Ls7uMoRN6W484+0uR/ptqLQ6bi5NcAAAAASUVORK5CYII=">
+<title>ParkEz · Park near the metro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Layout: map-first. Phone = full-screen map, floating search + tabs + chips, draggable bottom sheet, sticky book bar.
+   Laptop (1000px+) = fixed left panel (brand, tabs, search, chips, views) + full map on the right with live stats. Blue on black. */
+:root {
+  --bg: #05070B; --s1: #0B1019; --s2: #111927; --s3: #1A2436; --line: #1C2738;
+  --text: #EAF1FF; --muted: #8C9BB5; --faint: #56647C;
+  --blue: #2F7BFF; --blue-2: #5A9BFF; --blue-ink: #031026; --cyan: #22C3EE; --red: #FF5A66; --ok: #2ED47A;
+  --purple: #B65CE6; --green: #1DB563; --yellow: #F2C200;
+  --display: "Poppins", "Arial Black", system-ui, sans-serif;
+  --body: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --panel-w: 430px; --sheet-peek: 46vh;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 15px/1.45 var(--body); overflow: hidden; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; touch-action: manipulation; }
+:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 2px; }
+a { color: var(--blue-2); }
+
+#map { position: fixed; inset: 0; z-index: 1; background: #070b12; }
+.leaflet-container { background: #070b12; font-family: var(--body); }
+.leaflet-tile-pane { filter: sepia(1) hue-rotate(178deg) saturate(2.2) brightness(.78) contrast(1.05); }
+.leaflet-control-attribution { background: rgb(5 7 11 / .75) !important; color: var(--faint) !important; font-size: 10px !important; }
+.leaflet-control-attribution a { color: var(--muted) !important; }
+.leaflet-control-zoom { display: none; }
+
+/* ---------- top overlay (phone) ---------- */
+.top { position: fixed; z-index: 20; left: 0; right: 0; top: 0; padding: calc(env(safe-area-inset-top, 0px) + 10px) 12px 0; display: flex; flex-direction: column; gap: 9px; pointer-events: none; }
+.top > * { pointer-events: auto; }
+.searchrow { display: flex; gap: 8px; align-items: center; }
+.logo-btn { width: 46px; height: 46px; border: 0; padding: 0; border-radius: 14px; background: none; flex: none; box-shadow: 0 6px 18px rgb(0 0 0 / .55); }
+.logo-btn svg { width: 46px; height: 46px; display: block; }
+.search { flex: 1; min-width: 0; height: 46px; display: flex; align-items: center; gap: 10px; padding: 0 14px; background: var(--s1); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 6px 18px rgb(0 0 0 / .55); }
+.search svg { width: 18px; height: 18px; stroke: var(--muted); fill: none; stroke-width: 2.2; flex: none; }
+.search input { flex: 1; min-width: 0; border: 0; outline: none; background: none; font-size: 16px; color: var(--text); }
+.search input::placeholder { color: var(--faint); }
+.search:focus-within { border-color: var(--blue); }
+.results { background: var(--s1); border: 1px solid var(--line); border-radius: 14px; max-height: 50vh; overflow-y: auto; box-shadow: 0 12px 30px rgb(0 0 0 / .6); }
+.results button { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 11px 14px; }
+.results button:last-child { border-bottom: 0; }
+.results button:hover { background: var(--s2); }
+.results small { color: var(--muted); margin-left: auto; font-size: 12px; }
+.tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; background: var(--s1); border: 1px solid var(--line); border-radius: 14px; padding: 4px; box-shadow: 0 6px 18px rgb(0 0 0 / .5); }
+.tabs button { border: 0; background: none; border-radius: 10px; padding: 8px 4px; font-size: 13px; font-weight: 900; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 6px; }
+.tabs button svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.tabs button[aria-current="page"] { background: var(--blue); color: #fff; }
+.tabs .badge { min-width: 17px; height: 17px; border-radius: 9px; background: var(--red); color: #fff; font-size: 10.5px; display: inline-grid; place-items: center; padding: 0 4px; }
+.chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--s1); color: var(--text); font-size: 13px; font-weight: 700; white-space: nowrap; box-shadow: 0 4px 12px rgb(0 0 0 / .45); }
+.chip i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.live { position: fixed; z-index: 15; right: 12px; top: calc(env(safe-area-inset-top, 0px) + 160px); display: inline-flex; align-items: center; gap: 7px; background: rgb(5 7 11 / .85); border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px; font-size: 11px; font-weight: 900; letter-spacing: .08em; }
+.live b { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: pulse 1.6s infinite; }
+.live span { color: var(--muted); font-weight: 700; letter-spacing: 0; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(255 90 102 / .6); } 70% { box-shadow: 0 0 0 8px rgb(255 90 102 / 0); } 100% { box-shadow: 0 0 0 0 rgb(255 90 102 / 0); } }
+.stats, .legend, .brandrow { display: none; }
+
+/* ---------- sheet ---------- */
+.sheet { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; height: var(--sheet-peek); background: var(--bg); border-top-left-radius: 22px; border-top-right-radius: 22px; border-top: 1px solid var(--line); box-shadow: 0 -10px 40px rgb(0 0 0 / .65); display: flex; flex-direction: column; transition: height .25s ease; }
+.sheet.dragging { transition: none; }
+.grab { flex: none; padding: 9px 0 5px; display: grid; place-items: center; touch-action: none; cursor: grab; border: 0; background: none; width: 100%; }
+.grab span { width: 44px; height: 5px; border-radius: 5px; background: var(--s3); }
+.navbar { flex: none; display: flex; align-items: center; gap: 10px; padding: 2px 16px 10px; min-height: 40px; }
+.navbar .backbtn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--s1); display: grid; place-items: center; flex: none; }
+.navbar .backbtn svg { width: 18px; height: 18px; stroke: var(--text); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.navbar .crumb { font-size: 12.5px; color: var(--muted); font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sheet-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 0 16px calc(env(safe-area-inset-bottom, 0px) + 100px); }
+.view { display: flex; flex-direction: column; gap: 14px; }
+
+h1, h2, h3 { margin: 0; font-family: var(--display); line-height: 1.12; }
+h1 { font-size: 24px; font-weight: 800; }
+h2 { font-size: 19px; font-weight: 700; }
+h3 { font-size: 15.5px; font-weight: 700; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+.eyebrow { font: 900 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--blue-2); }
+
+.banner { position: relative; border-radius: 18px; overflow: hidden; min-height: 132px; background: var(--s2); display: flex; align-items: flex-end; }
+.banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(5 7 11 / 0) 25%, rgb(5 7 11 / .92) 100%); }
+.banner .in { position: relative; z-index: 1; padding: 14px; display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.banner .credit { position: absolute; z-index: 1; right: 8px; top: 8px; font-size: 10px; background: rgb(5 7 11 / .7); color: var(--muted); padding: 2px 6px; border-radius: 6px; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.linepill { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 900; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; background: rgb(5 7 11 / .75); border: 1px solid var(--line); }
+.linepill i { width: 8px; height: 8px; border-radius: 50%; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kpi { background: var(--s1); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+.kpi b { display: block; font: 800 20px var(--display); font-variant-numeric: tabular-nums; }
+.kpi span { font-size: 11.5px; color: var(--muted); }
+.kpi.hot b { color: var(--ok); }
+.sort { display: flex; gap: 6px; flex-wrap: wrap; }
+.sort button { border: 1px solid var(--line); background: none; color: var(--muted); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; }
+.sort button[aria-pressed="true"] { color: #fff; background: var(--blue); border-color: var(--blue); }
+
+.cards { display: flex; flex-direction: column; gap: 10px; }
+.card { display: grid; grid-template-columns: 58px 1fr auto; gap: 12px; align-items: center; width: 100%; text-align: left; background: var(--s1); border: 1px solid var(--line); border-radius: 16px; padding: 10px 12px 10px 10px; }
+.card:hover, .card.sel { border-color: var(--blue); }
+.card.full { opacity: .5; }
+.thumb { width: 58px; height: 58px; border-radius: 12px; overflow: hidden; display: grid; place-items: center; background: var(--s2); position: relative; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.thumb.com { color: var(--blue-2); background: rgb(47 123 255 / .14); }
+.thumb.pri { color: var(--cyan); background: rgb(34 195 238 / .13); }
+.thumb.met { color: var(--text); background: rgb(234 241 255 / .08); }
+.card .t { font-weight: 900; font-size: 14.5px; display: block; line-height: 1.25; }
+.card .m { color: var(--muted); font-size: 12px; display: block; margin-top: 2px; }
+.card .tags { display: flex; gap: 5px; margin-top: 6px; flex-wrap: wrap; }
+.tag { font-size: 10.5px; font-weight: 900; letter-spacing: .03em; padding: 2px 7px; border-radius: 6px; background: var(--s3); color: var(--text); }
+.tag.best { background: var(--blue); color: #fff; }
+.tag.hot { background: rgb(255 90 102 / .18); color: #ff8f98; }
+.tag.real { background: rgb(46 212 122 / .14); color: #6ee7a6; }
+.card .r { text-align: right; display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+.price { font: 800 17px var(--display); white-space: nowrap; }
+.price small { font: 700 11px var(--body); color: var(--muted); }
+.left { font-size: 11.5px; font-weight: 900; color: var(--ok); white-space: nowrap; }
+.left.low { color: var(--red); }
+.left.none { color: var(--faint); }
+
+.scarcity { display: flex; flex-direction: column; gap: 8px; background: var(--s1); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; }
+.scarcity .top-row { display: flex; justify-content: space-between; align-items: baseline; font-weight: 900; }
+.bar { height: 8px; border-radius: 8px; background: var(--s3); overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 8px; background: var(--blue); transition: width .4s; }
+.bar.low i { background: var(--red); }
+.proof { font-size: 13px; color: var(--muted); }
+.proof b { color: var(--text); }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.seg button { border: 1px solid var(--line); background: var(--s1); border-radius: 12px; padding: 10px 4px 8px; font-weight: 900; font-size: 13px; position: relative; }
+.seg button small { display: block; font-weight: 700; font-size: 11px; color: var(--muted); }
+.seg button[aria-pressed="true"] { border-color: var(--blue); background: rgb(47 123 255 / .14); }
+.seg .pop { position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background: var(--blue); color: #fff; font-size: 9px; padding: 1px 6px; border-radius: 5px; letter-spacing: .04em; white-space: nowrap; }
+.veh { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.veh button { border: 1px solid var(--line); background: var(--s1); border-radius: 12px; padding: 9px; font-weight: 900; font-size: 13px; }
+.veh button[aria-pressed="true"] { border-color: var(--text); background: var(--text); color: var(--bg); }
+.anchor { display: flex; justify-content: space-between; gap: 12px; align-items: center; background: rgb(47 123 255 / .1); border: 1px solid rgb(47 123 255 / .4); border-radius: 14px; padding: 12px 14px; font-size: 13px; }
+.anchor b { font: 800 16px var(--display); color: var(--blue-2); white-space: nowrap; }
+.feat { display: flex; flex-wrap: wrap; gap: 6px; }
+.linkbtn { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--line); background: var(--s1); border-radius: 12px; padding: 11px; font-weight: 900; font-size: 13.5px; color: var(--text); text-decoration: none; }
+.linkbtn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.trip { display: flex; flex-direction: column; background: var(--s1); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; }
+.leg { display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; position: relative; padding: 4px 0 12px; }
+.leg:last-child { padding-bottom: 2px; }
+.leg:not(:last-child)::before { content: ""; position: absolute; left: 12px; top: 30px; bottom: 0; width: 2px; background: var(--s3); }
+.leg i { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 800 11px var(--display); font-style: normal; color: #fff; }
+.leg b { display: block; font-size: 14px; }
+.leg span { font-size: 12.5px; color: var(--muted); }
+.leg em { font-style: normal; font-weight: 900; font-size: 13px; white-space: nowrap; }
+.note { font-size: 11.5px; color: var(--faint); }
+
+.bookbar { position: fixed; z-index: 40; left: 12px; right: 12px; bottom: calc(env(safe-area-inset-bottom, 0px) + 12px); display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--blue); color: #fff; border: 0; border-radius: 16px; padding: 12px 16px; box-shadow: 0 10px 30px rgb(47 123 255 / .35); text-align: left; }
+.bookbar .l b { display: block; font: 800 18px var(--display); }
+.bookbar .l span { font-size: 12px; font-weight: 700; opacity: .85; }
+.bookbar .cta { font: 800 15px var(--display); white-space: nowrap; }
+.bookbar.disabled { background: var(--s3); color: var(--muted); box-shadow: none; }
+
+.held { background: rgb(255 90 102 / .12); border: 1px solid rgb(255 90 102 / .45); border-radius: 14px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.held b { font: 800 22px var(--display); color: #ff8f98; font-variant-numeric: tabular-nums; }
+.qr { align-self: center; background: #fff; border-radius: 16px; padding: 14px; }
+.qr canvas { display: block; width: 190px; height: 190px; image-rendering: pixelated; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 7px 14px; font-size: 14px; margin: 0; background: var(--s1); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; text-align: right; font-weight: 900; }
+.btn { width: 100%; border: 0; border-radius: 14px; padding: 14px; font: 800 15px var(--display); background: var(--blue); color: #fff; }
+.btn.ghost { background: none; border: 1.5px solid var(--line); color: var(--text); }
+.btn.sm { width: auto; padding: 11px 16px; }
+
+/* transit */
+.lcard { background: var(--s1); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.lcard .hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.lcard .hd b { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.lcard .hd b i { width: 12px; height: 12px; border-radius: 50%; }
+.st-ok { font-size: 11px; font-weight: 900; color: var(--ok); }
+.freq { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.freq div { background: var(--s2); border-radius: 10px; padding: 7px 9px; font-size: 11.5px; color: var(--muted); }
+.freq b { display: block; color: var(--text); font-size: 14px; }
+.dest { display: grid; grid-template-columns: 40px 1fr auto; gap: 10px; align-items: center; width: 100%; text-align: left; background: var(--s1); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+.dest:hover { border-color: var(--blue); }
+.dest .ico { width: 40px; height: 40px; border-radius: 12px; background: rgb(47 123 255 / .14); color: var(--blue-2); display: grid; place-items: center; font: 800 13px var(--display); }
+.dest b { display: block; }
+.dest span { font-size: 12px; color: var(--muted); }
+.cover { display: flex; flex-direction: column; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+.cover div { display: flex; justify-content: space-between; gap: 10px; padding: 10px 14px; font-size: 13px; background: var(--s1); border-bottom: 1px solid var(--line); }
+.cover div:last-child { border-bottom: 0; }
+.cover b { white-space: nowrap; }
+.opt { display: grid; grid-template-columns: 40px 1fr auto; gap: 10px; align-items: center; background: var(--s1); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+.opt.best { border-color: var(--blue); }
+.opt .ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font: 800 12px var(--display); color: #fff; }
+.opt b { display: block; font-size: 14px; }
+.opt span { font-size: 12px; color: var(--muted); }
+.opt .r { text-align: right; }
+.opt .r b { font: 800 16px var(--display); }
+.nexts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.nexts div { background: var(--s2); border-radius: 12px; padding: 10px; }
+.nexts span { font-size: 11.5px; color: var(--muted); display: block; }
+.nexts b { font: 800 20px var(--display); font-variant-numeric: tabular-nums; }
+
+/* owners */
+.earn { background: linear-gradient(135deg, #0E2A5C, #0B1019); border: 1px solid rgb(47 123 255 / .4); border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.earn b { font: 800 30px var(--display); }
+label.f { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
+label.f input, label.f select { background: var(--s2); border: 1px solid var(--line); border-radius: 12px; padding: 11px; font-size: 16px; color: var(--text); width: 100%; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.toast { position: fixed; z-index: 60; left: 50%; transform: translateX(-50%); top: calc(env(safe-area-inset-top, 0px) + 14px); background: var(--text); color: var(--bg); border-radius: 12px; padding: 10px 14px; font-weight: 900; font-size: 13.5px; box-shadow: 0 10px 30px rgb(0 0 0 / .5); max-width: calc(100% - 24px); }
+
+/* splash */
+.splash { position: fixed; inset: 0; z-index: 100; background: radial-gradient(120% 70% at 50% 0%, #0D2147 0%, #05070B 62%); display: flex; flex-direction: column; justify-content: flex-end; gap: 18px; padding: 28px 22px calc(env(safe-area-inset-bottom, 0px) + 26px); overflow-y: auto; }
+.splash .mark { position: absolute; top: 11%; left: 50%; transform: translateX(-50%); width: 128px; height: 128px; filter: drop-shadow(0 20px 40px rgb(47 123 255 / .35)); }
+.splash .copy { display: flex; flex-direction: column; gap: 16px; }
+.splash .word { font: 800 56px/0.95 var(--display); letter-spacing: .02em; }
+.splash .word em { font-style: normal; color: var(--blue-2); }
+.splash .tag { font: 900 20px/1.25 var(--body); color: var(--blue-2); }
+.splash .pts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.splash .pts div { background: rgb(11 16 25 / .8); border: 1px solid var(--line); border-radius: 14px; padding: 10px; font-size: 12px; color: var(--muted); }
+.splash .pts b { display: block; font: 800 18px var(--display); color: var(--text); }
+.splash .disc { font-size: 11.5px; color: var(--faint); text-align: center; }
+
+/* map markers */
+.pk { width: 22px; height: 22px; border-radius: 7px; display: grid; place-items: center; font: 800 11px var(--display); box-shadow: 0 2px 6px rgb(0 0 0 / .6); border: 2px solid var(--bg); }
+.pk.com { background: var(--blue); color: #fff; }
+.pk.pri { background: var(--cyan); color: var(--blue-ink); }
+.pk.met { background: var(--text); color: var(--bg); }
+.pk.low { box-shadow: 0 0 0 3px var(--red), 0 2px 6px rgb(0 0 0 / .6); }
+.pk.none { background: var(--s3); color: var(--faint); }
+.pk.sel { transform: scale(1.4); box-shadow: 0 0 0 3px #fff, 0 4px 12px rgb(0 0 0 / .7); }
+.bus { width: 20px; height: 14px; border-radius: 4px; background: #FF8A3D; border: 2px solid var(--bg); box-shadow: 0 2px 6px rgb(0 0 0 / .6); }
+.dpin { width: 30px; height: 30px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--red); border: 3px solid #fff; box-shadow: 0 4px 12px rgb(0 0 0 / .6); }
+.stn-label { background: rgb(5 7 11 / .88); border: 1px solid var(--line); color: var(--text); font: 800 11px var(--body); padding: 2px 7px; border-radius: 6px; white-space: nowrap; box-shadow: none; }
+.stn-label::before { display: none; }
+
+/* ---------- LAPTOP ---------- */
+@media (min-width: 1000px) {
+  #map { left: var(--panel-w); }
+  .top { right: auto; width: var(--panel-w); padding: 20px 20px 14px; background: var(--bg); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); gap: 12px; }
+  .brandrow { display: flex; align-items: center; justify-content: space-between; }
+  .brandrow .b { display: flex; align-items: center; gap: 10px; }
+  .brandrow .b svg { width: 34px; height: 34px; }
+  .brandrow .b strong { font: 800 22px var(--display); letter-spacing: .04em; }
+  .brandrow .b strong em { font-style: normal; color: var(--blue-2); }
+  .brandrow span { font-size: 12px; color: var(--blue-2); font-weight: 900; text-align: right; }
+  .logo-btn { display: none; }
+  .search, .chip, .tabs { box-shadow: none; }
+  .chips { flex-wrap: wrap; overflow: visible; }
+  .sheet { top: var(--top-h, 230px); bottom: 0; left: 0; right: auto; width: var(--panel-w); height: auto !important; border-radius: 0; border-top: 0; border-right: 1px solid var(--line); box-shadow: none; transition: none; }
+  .grab { display: none; }
+  .navbar { padding: 14px 20px 10px; }
+  .sheet-body { padding: 0 20px 110px; }
+  .bookbar { left: 20px; right: auto; width: calc(var(--panel-w) - 40px); bottom: 20px; }
+  .live { top: 20px; right: 20px; font-size: 12px; padding: 8px 14px; }
+  .stats { display: flex; position: fixed; z-index: 15; left: calc(var(--panel-w) + 20px); bottom: 24px; gap: 10px; }
+  .stats div { background: rgb(5 7 11 / .88); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; min-width: 118px; }
+  .stats b { display: block; font: 800 22px var(--display); font-variant-numeric: tabular-nums; }
+  .stats span { font-size: 11.5px; color: var(--muted); }
+  .legend { display: flex; position: fixed; z-index: 15; right: 20px; bottom: 24px; flex-direction: column; gap: 6px; background: rgb(5 7 11 / .88); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; font-size: 12.5px; }
+  .legend div { display: flex; align-items: center; gap: 8px; }
+  .legend i { width: 18px; height: 4px; border-radius: 3px; display: inline-block; }
+  .legend .sq { width: 14px; height: 14px; border-radius: 4px; }
+  .toast { left: calc(50% + var(--panel-w) / 2); }
+  .splash { flex-direction: row; align-items: center; justify-content: center; gap: 80px; padding: 48px; }
+  .splash .mark { position: static; transform: none; width: 250px; height: 250px; order: 2; }
+  .splash .copy { max-width: 540px; }
+  .splash .word { font-size: 96px; }
+  .splash .btn { width: auto; padding: 15px 36px; align-self: flex-start; }
+  .splash .disc { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { .live b { animation: none; } .sheet { transition: none; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="mark" viewBox="0 0 120 120">
+    <rect width="120" height="120" rx="28" fill="#2F7BFF"/>
+    <path d="M38 98 V26 H66 A24 24 0 0 1 66 74 H38" fill="none" stroke="#05080E" stroke-width="15" stroke-linejoin="round" stroke-linecap="square"/>
+    <path d="M38 98 H96" stroke="#EAF1FF" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="96" cy="98" r="7.5" fill="#05080E" stroke="#EAF1FF" stroke-width="4"/>
+  </symbol>
+  <symbol id="i-com" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/></symbol>
+  <symbol id="i-pri" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-met" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="4"/><path d="M6 10h12M9 21l1.5-4M15 21l-1.5-4"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</defs></svg>
+
+<div class="splash" id="splash">
+  <svg class="mark"><use href="#mark"/></svg>
+  <div class="copy">
+    <div class="word">PARK<em>EZ</em></div>
+    <div class="tag">Park near the metro. Ride the rest.</div>
+    <div class="pts">
+      <div><b>3</b>metro lines, live</div>
+      <div><b id="sp-spots">300+</b>spots within 2 km</div>
+      <div><b>₹10</b>an hour onwards</div>
+    </div>
+    <button class="btn" id="start" type="button">Find parking near the metro</button>
+    <p class="disc">Prototype. Metro lines, stations and building names are real (OpenStreetMap); photos from Wikipedia. Parking availability, prices, trains and buses are simulated. No partnership with any property is implied.</p>
+  </div>
+</div>
+
+<div id="map" aria-label="Map of Namma Metro lines, buses and parking"></div>
+
+<div class="top" id="top">
+  <div class="brandrow"><div class="b"><svg><use href="#mark"/></svg><strong>PARK<em>EZ</em></strong></div><span>Park near the metro.<br>Ride the rest.</span></div>
+  <div class="searchrow">
+    <button class="logo-btn" id="logo" type="button" aria-label="About ParkEz"><svg><use href="#mark"/></svg></button>
+    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search a metro station" autocomplete="off" aria-label="Search a metro station"></label>
+  </div>
+  <div class="results" id="results" hidden></div>
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" data-tab="park" aria-current="page"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>Park</button>
+    <button type="button" data-tab="transit"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="4"/><path d="M6 10h12M9 21l1.5-4M15 21l-1.5-4"/></svg>Transit</button>
+    <button type="button" data-tab="bookings"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>Trips<span class="badge" id="badge" hidden>0</span></button>
+    <button type="button" data-tab="owners"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Owners</button>
+  </nav>
+  <div class="chips" id="chips" role="group" aria-label="Filters">
+    <button class="chip" data-line="purple" aria-pressed="true"><i style="background:var(--purple)"></i>Purple</button>
+    <button class="chip" data-line="green" aria-pressed="true"><i style="background:var(--green)"></i>Green</button>
+    <button class="chip" data-line="yellow" aria-pressed="true"><i style="background:var(--yellow)"></i>Yellow</button>
+    <button class="chip" data-layer="bus" aria-pressed="true"><i style="background:#FF8A3D;border-radius:3px"></i>Buses</button>
+    <button class="chip" data-f="com" aria-pressed="false">Commercial</button>
+    <button class="chip" data-f="pri" aria-pressed="false">Private</button>
+    <button class="chip" data-f="cov" aria-pressed="false">Covered</button>
+    <button class="chip" data-f="ev" aria-pressed="false">EV charging</button>
+  </div>
+</div>
+
+<div class="live" title="Simulated live data"><b></b>LIVE <span id="live-n">0 trains</span></div>
+<div class="stats" aria-live="off">
+  <div><b id="k-trains">0</b><span>trains running</span></div>
+  <div><b id="k-buses">0</b><span>feeder buses</span></div>
+  <div><b id="k-spots">0</b><span>parking spots</span></div>
+  <div><b id="k-free">0</b><span>free right now</span></div>
+</div>
+<div class="legend">
+  <div><i style="background:var(--purple)"></i>Purple Line</div>
+  <div><i style="background:var(--green)"></i>Green Line</div>
+  <div><i style="background:var(--yellow)"></i>Yellow Line</div>
+  <div><i style="background:#FF8A3D;height:3px"></i>Feeder bus route</div>
+  <div><i class="sq" style="background:var(--blue)"></i>Commercial parking</div>
+  <div><i class="sq" style="background:var(--cyan)"></i>Private parking</div>
+  <div><i class="sq" style="background:var(--text)"></i>Metro lot (live space only)</div>
+  <div><i class="sq" style="background:var(--blue);border-radius:50%"></i>ParkEz zone: station short of parking</div>
+</div>
+
+<section class="sheet" id="sheet" aria-label="Panel">
+  <button class="grab" id="grab" type="button" aria-label="Expand or collapse"><span></span></button>
+  <div class="navbar" id="navbar">
+    <button class="backbtn" id="backbtn" type="button" aria-label="Back"><svg><use href="#i-back"/></svg></button>
+    <span class="crumb" id="crumb"></span>
+  </div>
+  <div class="sheet-body" id="body">
+
+    <!-- PARK: all stations -->
+    <div class="view" id="v-overview" hidden>
+      <div><p class="eyebrow">All stations</p><h1>Where do you want to park?</h1></div>
+      <div class="sort" role="group" aria-label="Line"><button data-ol="all" aria-pressed="true">All lines</button><button data-ol="purple" aria-pressed="false">Purple</button><button data-ol="green" aria-pressed="false">Green</button><button data-ol="yellow" aria-pressed="false">Yellow</button></div>
+      <div class="cards" id="ov-list"></div>
+    </div>
+
+    <!-- PARK: station -->
+    <div class="view" id="v-station" hidden>
+      <div class="banner" id="stn-banner"><img id="stn-img" alt=""><span class="credit" id="stn-credit">Photo: Wikipedia</span><div class="in"><div class="row" id="stn-lines"></div><h1 id="stn-name">Station</h1><p class="small muted">Parking within 2 km · tap a spot to book</p></div></div>
+      <div class="kpis">
+        <div class="kpi"><b id="s-count">0</b><span>spots nearby</span></div>
+        <div class="kpi hot"><b id="s-free">0</b><span>free now</span></div>
+        <div class="kpi"><b id="s-next">0 min</b><span>next train</span></div>
+      </div>
+      <div class="anchor" id="stn-note" hidden></div>
+      <div class="sort" role="group" aria-label="Sort">
+        <button data-sort="near" aria-pressed="true">Nearest</button>
+        <button data-sort="cheap" aria-pressed="false">Cheapest</button>
+        <button data-sort="free" aria-pressed="false">Most free</button>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+
+    <!-- PARK: spot -->
+    <div class="view" id="v-spot" hidden>
+      <div class="banner" id="d-banner"><img id="d-img" alt=""><span class="credit" id="d-credit"></span><div class="in"><span class="tag" id="d-type" style="align-self:flex-start"></span><h1 id="d-name"></h1><p class="small muted" id="d-sub"></p></div></div>
+      <div class="two">
+        <a class="linkbtn" id="d-photos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-8 7"/></svg>Real photos</a>
+        <a class="linkbtn" id="d-street" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Street View</a>
+      </div>
+      <div class="scarcity">
+        <div class="top-row"><span id="d-left"></span><span class="muted small" id="d-cap"></span></div>
+        <div class="bar" id="d-bar"><i></i></div>
+        <div class="proof"><b id="d-booked">0</b> people booked here today</div>
+      </div>
+      <div class="veh" role="group" aria-label="Vehicle"><button data-veh="car" aria-pressed="true">Car</button><button data-veh="bike" aria-pressed="false">Two-wheeler</button></div>
+      <div class="seg" role="group" aria-label="Duration" id="dur">
+        <button data-h="1" aria-pressed="false">1 hr<small></small></button>
+        <button data-h="2" aria-pressed="false">2 hrs<small></small></button>
+        <button data-h="day" aria-pressed="true"><span class="pop">MOST BOOKED</span>Full day<small></small></button>
+      </div>
+      <div class="lcard" id="d-metro" hidden><h3>Metro-run lot · pay at the gate</h3><p class="small muted">BMRCL's rate: <b id="d-gate" style="color:var(--text)"></b>. ParkEz only shows live space here and takes no fee. The metro keeps 100%.</p></div>
+      <div class="anchor" id="d-anchor"><span>Street parking under Bengaluru's draft 2026 rules: ₹40–80 an hour for cars. Here:</span><b id="d-rate"></b></div>
+      <div class="feat" id="d-feat"></div>
+      <div class="trip" id="d-trip"></div>
+      <p class="note">Building name and location are real (OpenStreetMap). Availability, price and the parking arrangement are simulated for this prototype.</p>
+    </div>
+
+    <!-- PASS (hold / paid) -->
+    <div class="view" id="v-pass" hidden>
+      <div class="held" id="held"><span><b id="hold-t">10:00</b><br><span class="small">Spot held for you. Pay to confirm.</span></span><button class="btn sm" id="pay" type="button">Pay by UPI</button></div>
+      <div id="paid" hidden style="display:flex;flex-direction:column;gap:12px">
+        <h1>You're parked in.</h1>
+        <div class="qr"><canvas id="qr" width="29" height="29" aria-label="Entry QR code"></canvas></div>
+      </div>
+      <dl class="kv" id="pass-kv"></dl>
+      <div class="trip" id="pass-trip"></div>
+      <div class="two"><button class="btn ghost" id="cancel" type="button">Cancel</button><button class="btn" id="go" type="button">Directions</button></div>
+    </div>
+
+    <!-- TRANSIT home -->
+    <div class="view" id="v-transit" hidden>
+      <div><p class="eyebrow">Live transit</p><h1>Trains and buses right now</h1></div>
+      <div id="lines"></div>
+      <div><p class="eyebrow" style="margin-top:6px">Going past the metro?</p><h2 style="margin-top:6px">Edge-of-city trips</h2><p class="small muted" style="margin-top:4px">No parking where you're going? We find the last guaranteed spot and plan the rest by metro, bus or auto.</p></div>
+      <div class="cards" id="dests"></div>
+      <p class="note">Timetables, frequencies, bus routes and fares are illustrative, based on typical Namma Metro and BMTC service. Live BMTC data is being opened to apps (Oct 2026).</p>
+    </div>
+
+    <!-- TRANSIT edge trip -->
+    <div class="view" id="v-edge" hidden>
+      <div><p class="eyebrow">Edge-of-city trip</p><h1 id="e-name"></h1><p class="small muted" id="e-sub"></p></div>
+      <div class="cover" id="e-cover"></div>
+      <h3>Step 1 · Park at the last guaranteed spot</h3>
+      <button type="button" class="card" id="e-spot"></button>
+      <h3>Step 2 · Pick how you go the rest</h3>
+      <div class="cards" id="e-opts"></div>
+      <button class="btn" id="e-book" type="button">Book the parking spot</button>
+      <p class="note">Bus numbers, frequencies and fares are illustrative estimates.</p>
+    </div>
+
+    <!-- BOOKINGS -->
+    <div class="view" id="v-bookings" hidden>
+      <div><p class="eyebrow">My trips</p><h1>Bookings</h1></div>
+      <div class="kpis">
+        <div class="kpi"><b id="b-n">0</b><span>bookings</span></div>
+        <div class="kpi hot"><b id="b-km">0</b><span>km on metro</span></div>
+        <div class="kpi"><b id="b-co2">0</b><span>kg CO₂ saved*</span></div>
+      </div>
+      <div class="cards" id="b-list"></div>
+      <div class="lcard"><h3>Pay only when you park</h3><p class="small muted">No subscription. Car ₹20 an hour or ₹60 a day · Two-wheeler ₹10 an hour or ₹25 a day.</p></div>
+      <p class="note">*Rough estimate: distance ridden by metro instead of driving × 0.15 kg CO₂ per km.</p>
+    </div>
+
+    <!-- OWNERS -->
+    <div class="view" id="v-owners" hidden>
+      <div><p class="eyebrow">For space owners</p><h1>Your empty slot, earning</h1></div>
+      <div class="earn"><span class="small muted">Mr. Rao · Slot B-204 · this month</span><b>₹660</b><span>credited to your maintenance bill</span><span class="small muted">22 bookings × ₹30 your share of each ₹60 day</span></div>
+      <div class="lcard"><h3>Where each ₹60 car day goes</h3>
+        <div class="cover" style="border:0">
+          <div><span>You (resident)</span><b>₹30</b></div><div><span>Society fund</span><b>₹9</b></div><div><span>ParkEz</span><b>₹15</b></div><div><span>Society app partner</span><b>₹3</b></div><div><span>Payments + damage cover</span><b>₹3</b></div>
+        </div>
+      </div>
+      <form class="lcard" id="list-form">
+        <h3>List another slot</h3>
+        <label class="f">Society or building<input id="o-addr" required placeholder="e.g. apartment near Indiranagar station"></label>
+        <div class="frow"><label class="f">Slot number<input id="o-slot" placeholder="e.g. C-112"></label><label class="f">Free when<select id="o-hours"><option>Weekdays 9–7</option><option>All day</option><option>Nights &amp; weekends</option></select></label></div>
+        <button class="btn" type="submit">List my slot</button>
+        <p class="note">Drivers are verified. Damage is covered. You choose the hours.</p>
+      </form>
+      <div class="cards" id="o-list"></div>
+    </div>
+  </div>
+</section>
+
+<button class="bookbar" id="bookbar" type="button" hidden>
+  <span class="l"><b id="bb-price">₹0</b><span id="bb-sub"></span></span>
+  <span class="cta" id="bb-cta">Hold this spot →</span>
+</button>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>window.METRO=[{"id":"purple","name":"Purple Line","color":"#B65CE6","stations":[{"n":"Challaghatta","a":12.89733,"o":77.46122},{"n":"Kengeri","a":12.90799,"o":77.47652},{"n":"Kengeri Bus Terminal","a":12.91481,"o":77.48776},{"n":"Pattanagere","a":12.92431,"o":77.49827},{"n":"Jnanabharathi","a":12.93544,"o":77.51217},{"n":"Rajarajeshwari Nagar","a":12.93667,"o":77.51966},{"n":"Pantharapalya - Nayandahalli","a":12.94168,"o":77.5251},{"n":"Mysore Road","a":12.9467,"o":77.53007},{"n":"Deepanjali Nagar","a":12.95203,"o":77.537},{"n":"Attiguppe","a":12.96187,"o":77.53355},{"n":"Vijayanagar","a":12.97095,"o":77.53739},{"n":"Sri Balagangadharanatha Swamiji Stn., Hosahalli","a":12.97422,"o":77.54562},{"n":"Magadi Road","a":12.97565,"o":77.55535},{"n":"Krantivira Sangolli Rayanna Railway Station","a":12.9759,"o":77.56537},{"n":"Nadaprabhu Kempegowda Station, Majestic (Purple Line)","a":12.97575,"o":77.57309},{"n":"Sir M. Visvesvaraya Stn., Central College","a":12.97454,"o":77.58421},{"n":"Dr. B. R. Ambedkar Station, Vidhana Soudha","a":12.979,"o":77.59183},{"n":"Cubbon Park","a":12.98098,"o":77.59758},{"n":"Mahatma Gandhi Road","a":12.97543,"o":77.60726},{"n":"Trinity","a":12.97304,"o":77.61702},{"n":"Halasuru","a":12.97652,"o":77.62667},{"n":"Indiranagar","a":12.97835,"o":77.63866},{"n":"Swami Vivekananda Road","a":12.98595,"o":77.64489},{"n":"Baiyappanahalli","a":12.99071,"o":77.65237},{"n":"Benniganahalli","a":12.99654,"o":77.66846},{"n":"Krishnarajapura","a":12.99994,"o":77.67791},{"n":"Singayyanapalya","a":12.99645,"o":77.69305},{"n":"Garudacharpalya","a":12.99334,"o":77.70411},{"n":"Hoodi","a":12.98854,"o":77.71093},{"n":"Seetharampalya","a":12.98053,"o":77.7089},{"n":"Kundalahalli","a":12.97753,"o":77.71608},{"n":"Nallurahalli","a":12.97658,"o":77.72535},{"n":"Sri Sathya Sai Hospital","a":12.98171,"o":77.72766},{"n":"Pattandur Agrahara","a":12.98764,"o":77.73835},{"n":"Kadugodi Tree Park","a":12.98548,"o":77.74754},{"n":"Hopefarm Channasandra","a":12.98753,"o":77.75397},{"n":"Whitefield (Kadugodi)","a":12.99596,"o":77.75798}],"tracks":[[[12.89681,77.46063],[12.89733,77.46122],[12.89777,77.46168],[12.89828,77.46246],[12.89857,77.46294],[12.89965,77.46465],[12.90023,77.46548],[12.90071,77.46621],[12.90214,77.4687],[12.90252,77.46923],[12.90302,77.4697],[12.90441,77.47051],[12.90491,77.47087],[12.90568,77.47191],[12.90662,77.47323]],[[12.92661,77.50087],[12.92731,77.50186],[12.92794,77.50262],[12.92849,77.5031],[12.92895,77.50354],[12.92926,77.50408],[12.92948,77.50476],[12.92975,77.50535],[12.93033,77.50585],[12.93086,77.50614],[12.93131,77.50646],[12.93264,77.50836],[12.93337,77.50919],[12.93431,77.51029],[12.9348,77.51079],[12.93511,77.5113],[12.93544,77.51217],[12.93589,77.51336],[12.93608,77.51393],[12.93615,77.51485],[12.93619,77.51546],[12.93626,77.51601]],[[12.90662,77.47323],[12.90693,77.47381],[12.90714,77.47456],[12.90732,77.47533],[12.90762,77.47595],[12.90799,77.47652],[12.90846,77.47723],[12.9087,77.47783],[12.90886,77.47864],[12.90932,77.47995],[12.90962,77.48048],[12.90994,77.48096],[12.91022,77.48157],[12.91038,77.48218],[12.91041,77.48334],[12.91045,77.48391],[12.91078,77.48443],[12.91228,77.48498],[12.9128,77.48525],[12.91323,77.4857],[12.91362,77.48618],[12.91435,77.48716],[12.91481,77.48776],[12.91553,77.4887],[12.91596,77.48919],[12.91632,77.48962],[12.917,77.49033],[12.91861,77.49122],[12.91959,77.49202],[12.92,77.49255],[12.92097,77.4933],[12.92141,77.49362],[12.92198,77.49437],[12.92283,77.49601],[12.92314,77.49672],[12.92355,77.49746],[12.92431,77.49827],[12.92479,77.49881],[12.92552,77.49953],[12.92613,77.50022],[12.92661,77.50087]],[[12.93667,77.51966],[12.93642,77.51902],[12.93631,77.51836],[12.93633,77.51766],[12.93633,77.51701],[12.93626,77.51601]],[[12.94168,77.5251],[12.94121,77.52482],[12.94011,77.52406],[12.93946,77.52346],[12.93898,77.52295],[12.93846,77.52216],[12.93792,77.52143],[12.93724,77.52088],[12.93667,77.51966]],[[12.94344,77.52632],[12.94261,77.5257],[12.94205,77.52534],[12.94168,77.5251]],[[12.94601,77.52873],[12.94563,77.52822],[12.94521,77.52773],[12.94481,77.52729],[12.94405,77.52665],[12.94344,77.52632]],[[12.9467,77.53007],[12.94633,77.52925],[12.94601,77.52873]],[[12.95203,77.537],[12.95118,77.5373],[12.95046,77.5373],[12.9498,77.53692],[12.94922,77.53633],[12.94832,77.53496],[12.94805,77.53427],[12.94761,77.53265],[12.94706,77.53089],[12.9467,77.53007]],[[12.96187,77.53355],[12.96124,77.53332],[12.96059,77.53309],[12.95994,77.53308],[12.95919,77.53336],[12.95832,77.53373],[12.95757,77.53409],[12.957,77.5343],[12.95622,77.53449],[12.95539,77.53471],[12.95352,77.53638],[12.95203,77.537]],[[12.96187,77.53355],[12.96586,77.53533],[12.96702,77.53591],[12.9676,77.53618],[12.96819,77.53642],[12.96888,77.53667],[12.96963,77.53693],[12.97095,77.53739]],[[12.97095,77.53739],[12.97165,77.53765],[12.9722,77.53787],[12.97279,77.53834],[12.97314,77.53888],[12.97379,77.54181],[12.9741,77.54338],[12.97418,77.54407],[12.97422,77.54562]],[[12.97422,77.54562],[12.97422,77.54664],[12.97431,77.54735],[12.97451,77.54807],[12.97449,77.54874],[12.97425,77.5493],[12.97393,77.54979],[12.9738,77.55039],[12.97398,77.55092],[12.97434,77.55139],[12.97496,77.55219],[12.97533,77.55274],[12.97555,77.55337],[12.97561,77.55424],[12.97564,77.55494],[12.97565,77.55535]],[[12.97565,77.55535],[12.97567,77.55591],[12.97568,77.5565],[12.97572,77.55721],[12.97578,77.55818],[12.97582,77.55893],[12.97581,77.55967],[12.97579,77.56038],[12.97574,77.56113],[12.97571,77.56173],[12.97565,77.56232],[12.97565,77.56296],[12.97568,77.56341]],[[12.9759,77.56537],[12.97568,77.56341]],[[12.97575,77.57309],[12.97589,77.57129],[12.97595,77.57029],[12.97602,77.56912],[12.97602,77.56691],[12.97595,77.56593],[12.9759,77.56537]],[[12.97454,77.58421],[12.97377,77.58286],[12.97347,77.58234],[12.97315,77.58173],[12.97303,77.58116],[12.97335,77.58041],[12.97436,77.57812],[12.97518,77.57614],[12.97539,77.57527],[12.97554,77.57462],[12.97575,77.57309]],[[12.979,77.59183],[12.97808,77.591],[12.97766,77.5906],[12.97623,77.58787],[12.97595,77.58721],[12.97508,77.58516],[12.97454,77.58421]],[[12.98098,77.59758],[12.98139,77.59633],[12.98156,77.59572],[12.98162,77.59486],[12.98127,77.59409],[12.98061,77.59321],[12.979,77.59183]],[[12.97884,77.60098],[12.97946,77.60059],[12.98001,77.6001],[12.98061,77.59864],[12.98098,77.59758]],[[12.97724,77.60159],[12.97884,77.60098]],[[12.97543,77.60726],[12.97583,77.60567],[12.97598,77.60503],[12.97635,77.60343],[12.97654,77.60262],[12.97683,77.60193],[12.97724,77.60159]],[[12.97304,77.61702],[12.97402,77.61275],[12.97424,77.61192],[12.97439,77.6113],[12.97487,77.60926],[12.97509,77.60851],[12.97543,77.60726]],[[12.97652,77.62667],[12.97586,77.62617],[12.97504,77.62526],[12.97334,77.62248],[12.973,77.6217],[12.97276,77.62084],[12.97271,77.62025],[12.97267,77.61959],[12.97266,77.61883],[12.97304,77.61702]],[[12.97835,77.63866],[12.97832,77.63775],[12.97817,77.63294],[12.97847,77.62944],[12.9784,77.62879],[12.97798,77.62806],[12.97758,77.62746],[12.97652,77.62667]],[[12.98595,77.64489],[12.98536,77.64338],[12.98506,77.64264],[12.98451,77.64127],[12.98408,77.64073],[12.9835,77.64056],[12.98292,77.64057],[12.98049,77.64071],[12.9795,77.64077],[12.97885,77.6406],[12.97847,77.64016],[12.97835,77.63866]],[[12.98619,77.6455],[12.98595,77.64489]],[[12.99038,77.65117],[12.99004,77.64996],[12.98986,77.64938],[12.98947,77.64888],[12.98887,77.64858],[12.98815,77.64836],[12.98764,77.64815],[12.98705,77.64758],[12.9865,77.64624],[12.98619,77.6455]],[[12.99071,77.65237],[12.99038,77.65117]],[[12.99071,77.65237],[12.9909,77.65305],[12.99105,77.6536],[12.99125,77.65429],[12.99154,77.65485],[12.99201,77.65535],[12.99244,77.65583],[12.99279,77.65635]],[[12.99279,77.65635],[12.99307,77.65683],[12.99373,77.658],[12.99434,77.65909],[12.99469,77.65974],[12.99499,77.66033],[12.99528,77.66091],[12.99549,77.66141]],[[12.99549,77.66141],[12.99561,77.66205],[12.99561,77.66262],[12.99544,77.66337],[12.99534,77.66396]],[[12.99534,77.66396],[12.99531,77.66463],[12.99532,77.66485]],[[12.99532,77.66485],[12.99542,77.66547],[12.99558,77.66604],[12.99577,77.66662],[12.99607,77.66741],[12.9964,77.66817],[12.99654,77.66846]],[[12.99654,77.66846],[12.9968,77.66908],[12.99697,77.66973],[12.99702,77.67039],[12.99746,77.67132],[12.99781,77.67205],[12.99814,77.67271],[12.99839,77.67322],[12.99873,77.67392],[12.99902,77.67453],[12.99936,77.67523],[12.99972,77.676],[12.99988,77.67664],[12.9999,77.67683]],[[12.9999,77.67683],[12.99994,77.67791],[12.99999,77.67935],[13.00007,77.68032],[13.00023,77.68115],[13.00043,77.68178],[13.00041,77.68242],[13.0004,77.68382],[13.00038,77.68455],[13.00032,77.68548],[13.00026,77.68621],[13.0001,77.68678],[12.99979,77.68727],[12.99927,77.68792],[12.99848,77.68866],[12.99794,77.68951],[12.9975,77.6904],[12.99699,77.6915],[12.99645,77.69305],[12.99621,77.69373],[12.99586,77.69454],[12.99554,77.69525],[12.99541,77.69588],[12.99527,77.697],[12.99513,77.69793],[12.99479,77.69887],[12.9944,77.70002],[12.99425,77.70067],[12.99409,77.70136],[12.99403,77.7016]],[[12.99403,77.7016],[12.99372,77.70267],[12.99348,77.70364],[12.9933,77.70425],[12.99315,77.7048],[12.99303,77.70561],[12.99297,77.70689],[12.99294,77.70753],[12.99291,77.70859],[12.99287,77.70942],[12.99286,77.71004],[12.99283,77.71081],[12.99265,77.7116],[12.99228,77.71281],[12.99201,77.71341],[12.9915,77.71387],[12.99084,77.71397],[12.99029,77.71377],[12.98981,77.71306],[12.98943,77.71242],[12.98902,77.71175],[12.98879,77.71134]],[[12.98879,77.71134],[12.98848,77.71082],[12.98807,77.71009],[12.98775,77.70957],[12.98734,77.70919],[12.98651,77.70871],[12.98581,77.70844],[12.98522,77.70831],[12.98431,77.70826],[12.98412,77.70827]],[[12.98412,77.70827],[12.98305,77.70831],[12.98264,77.70835]],[[12.98264,77.70835],[12.98207,77.70847],[12.98138,77.70866]],[[12.98138,77.70866],[12.98066,77.70886],[12.98003,77.70904],[12.97921,77.70928],[12.97871,77.70952],[12.97835,77.71005],[12.97825,77.71075],[12.97806,77.71204]],[[12.97806,77.71204],[12.97792,77.71318],[12.97776,77.71452],[12.97757,77.71581],[12.97745,77.71667],[12.97737,77.71752],[12.97731,77.71824],[12.97719,77.71985],[12.97699,77.72166],[12.97689,77.72268],[12.97678,77.72327],[12.97666,77.72438],[12.97658,77.72535],[12.97655,77.72561]],[[12.97655,77.72561],[12.97651,77.72625],[12.9767,77.72683],[12.97714,77.7272],[12.97805,77.72731]],[[12.97805,77.72731],[12.97859,77.72732],[12.97934,77.72729],[12.98003,77.72732],[12.98063,77.72743],[12.98154,77.72762],[12.98221,77.72778],[12.98295,77.72806],[12.98359,77.72845],[12.98431,77.72901],[12.98487,77.72949],[12.98539,77.72996],[12.98576,77.73041],[12.98639,77.73147],[12.98672,77.73193],[12.98726,77.73235],[12.9877,77.73277],[12.98793,77.73337],[12.98789,77.73396],[12.98772,77.73508],[12.98768,77.73529]],[[12.98768,77.73529],[12.98764,77.73585],[12.98763,77.73665],[12.98764,77.73723],[12.98764,77.73808],[12.98764,77.7392],[12.98763,77.73996]],[[12.98763,77.73996],[12.98665,77.74393],[12.9863,77.74529],[12.98612,77.74585],[12.98567,77.74702]],[[12.98567,77.74702],[12.98525,77.74815],[12.98494,77.74903],[12.98464,77.74988],[12.98427,77.75098]],[[12.98427,77.75098],[12.98422,77.75155],[12.9844,77.75215],[12.98472,77.75261],[12.98506,77.75289]],[[12.98506,77.75289],[12.9859,77.75328],[12.98675,77.75363],[12.98753,77.75397],[12.98873,77.75447],[12.98891,77.75455]],[[12.98891,77.75455],[12.98953,77.75481],[12.99005,77.75507],[12.99181,77.75638]],[[12.99181,77.75638],[12.9923,77.75675],[12.99291,77.75709],[12.99475,77.75766],[12.99596,77.75798],[12.99623,77.75805]]]},{"id":"green","name":"Green Line","color":"#1DB563","stations":[{"n":"Madavara","a":13.05744,"o":77.47281},{"n":"Chikkabidarakallu","a":13.05238,"o":77.48792},{"n":"Manjunathanagara","a":13.05011,"o":77.49445},{"n":"Nagasandra","a":13.04798,"o":77.50015},{"n":"Dasarahalli","a":13.0433,"o":77.51256},{"n":"Jalahalli","a":13.03944,"o":77.51976},{"n":"Peenya Industry","a":13.03634,"o":77.52553},{"n":"Peenya","a":13.03305,"o":77.53322},{"n":"Goraguntepalya","a":13.02825,"o":77.54119},{"n":"Yeshwantpur","a":13.02337,"o":77.54975},{"n":"Sandal Soap Factory","a":13.01472,"o":77.55403},{"n":"Mahalakshmi","a":13.00807,"o":77.54882},{"n":"Rajajinagar","a":13.00054,"o":77.5497},{"n":"Mahakavi Kuvempu Road","a":12.99852,"o":77.55688},{"n":"Srirampura","a":12.99654,"o":77.56331},{"n":"Mantri Square Sampige Road","a":12.99048,"o":77.57076},{"n":"Nadaprabhu Kempegowda Station, Majestic (Green Line)","a":12.97506,"o":77.57304},{"n":"Chickpete","a":12.96692,"o":77.57457},{"n":"Krishna Rajendra Market","a":12.96089,"o":77.57468},{"n":"National College","a":12.95053,"o":77.57371},{"n":"Lalbagh","a":12.94653,"o":77.58004},{"n":"South End Circle","a":12.93826,"o":77.58008},{"n":"Jayanagar","a":12.92951,"o":77.58017},{"n":"Rashtreeya Vidyalaya Road","a":12.92096,"o":77.58029},{"n":"Banashankari","a":12.91522,"o":77.57362},{"n":"Jaya Prakash Nagar","a":12.90748,"o":77.57315},{"n":"Yelachenahalli","a":12.89604,"o":77.57014},{"n":"Konanakunte Cross","a":12.88894,"o":77.5627},{"n":"Doddakallasandra","a":12.88462,"o":77.55278},{"n":"Vajarahalli","a":12.87752,"o":77.54481},{"n":"Thalaghattapura","a":12.87139,"o":77.53842},{"n":"Silk Institute","a":12.86167,"o":77.52995}],"tracks":[[[13.04974,77.49542],[13.05011,77.49445],[13.05053,77.49326],[13.05075,77.49241],[13.05107,77.49151],[13.0517,77.48977],[13.05193,77.48919],[13.05238,77.48792],[13.05259,77.48736],[13.05346,77.48495],[13.0539,77.48373],[13.05447,77.48215],[13.05479,77.48127],[13.05558,77.47931],[13.05635,77.47743],[13.05681,77.47547],[13.05714,77.47412],[13.05744,77.47281],[13.05758,77.47218],[13.05794,77.47071],[13.05827,77.46957]],[[13.04798,77.50015],[13.0482,77.49956],[13.04854,77.49868],[13.04875,77.49812],[13.04974,77.49542]],[[13.0433,77.51256],[13.04371,77.51138],[13.04499,77.50886],[13.04526,77.50823],[13.04616,77.50515],[13.04713,77.50246],[13.04738,77.50178],[13.04798,77.50015]],[[13.03944,77.51976],[13.0401,77.51854],[13.04098,77.51755],[13.04191,77.51653],[13.0433,77.51256]],[[13.0372,77.52395],[13.03888,77.52084],[13.03944,77.51976]],[[13.03634,77.52553],[13.03664,77.52499],[13.03709,77.52415],[13.0372,77.52395]],[[13.03305,77.53322],[13.03435,77.531],[13.03476,77.5301],[13.03524,77.52838],[13.03554,77.52725],[13.03576,77.52662],[13.03634,77.52553]],[[13.02825,77.54119],[13.02879,77.54021],[13.02964,77.53875],[13.03015,77.53786],[13.03095,77.53662],[13.03174,77.53545],[13.03305,77.53322]],[[13.02337,77.54975],[13.02389,77.54884],[13.02825,77.54119]],[[13.01643,77.5539],[13.01725,77.55373],[13.01831,77.55344],[13.01913,77.55324],[13.02017,77.55276],[13.02102,77.55231],[13.02153,77.55204],[13.02203,77.55172],[13.02243,77.55131],[13.02337,77.54975]],[[13.01643,77.5539],[13.01557,77.55397],[13.01472,77.55403]],[[13.01472,77.55403],[13.01386,77.55408],[13.01322,77.55393],[13.01271,77.55345],[13.01219,77.55241],[13.01124,77.55068],[13.01092,77.55014],[13.01054,77.54971],[13.01006,77.54935],[13.00942,77.54906],[13.00887,77.54895],[13.00807,77.54882]],[[13.00807,77.54882],[13.00738,77.54872],[13.00668,77.54868]],[[13.00668,77.54868],[13.00567,77.54887],[13.00505,77.54897],[13.00255,77.5494],[13.00054,77.5497]],[[13.00054,77.5497],[12.99888,77.54999],[12.99832,77.55017],[12.99791,77.55075],[12.99789,77.55151],[12.99806,77.55216],[12.99825,77.55307],[12.99869,77.55542],[12.99863,77.55629],[12.99852,77.55688]],[[12.99852,77.55688],[12.99827,77.55788],[12.99803,77.55863],[12.9976,77.55979],[12.99735,77.56038],[12.99692,77.56127],[12.99673,77.56181],[12.99654,77.56331]],[[12.99654,77.56331],[12.99643,77.56391],[12.9963,77.56456],[12.9964,77.56549],[12.99644,77.56612],[12.99621,77.56667],[12.99473,77.56777],[12.99365,77.56854],[12.9928,77.56909],[12.99204,77.56964],[12.99136,77.57013],[12.99048,77.57076]],[[12.99048,77.57076],[12.99002,77.5711],[12.98924,77.57164],[12.98863,77.57188],[12.98833,77.57194]],[[12.98833,77.57194],[12.98754,77.57199],[12.98705,77.57201]],[[12.98705,77.57201],[12.98623,77.57204]],[[12.98623,77.57204],[12.9835,77.572],[12.98179,77.57196],[12.98043,77.572],[12.97979,77.57228],[12.97903,77.57268],[12.9785,77.57285],[12.97796,77.57285],[12.97682,77.57307],[12.97506,77.57304]],[[12.97506,77.57304],[12.97397,77.57302],[12.97332,77.57301],[12.9697,77.57461],[12.96901,77.57469],[12.96747,77.57459],[12.96692,77.57457],[12.96568,77.57454],[12.96503,77.57461],[12.96413,77.57485],[12.96337,77.57493],[12.9623,77.57489],[12.96089,77.57468]],[[12.96089,77.57468],[12.95982,77.57451],[12.95896,77.57423],[12.95742,77.57369],[12.9567,77.57363],[12.95594,77.57367]],[[12.95594,77.57367],[12.95352,77.5737],[12.95252,77.57369],[12.95053,77.57371]],[[12.95053,77.57371],[12.94948,77.57372],[12.94888,77.57394],[12.94848,77.57456],[12.94838,77.57518],[12.9483,77.57602],[12.94831,77.57898],[12.94805,77.57961],[12.94759,77.57995],[12.94653,77.58004]],[[12.94653,77.58004],[12.9436,77.58005],[12.94241,77.58006],[12.94016,77.58005],[12.93962,77.58007],[12.93826,77.58008]],[[12.93826,77.58008],[12.93597,77.58009],[12.93312,77.58011],[12.9303,77.58016],[12.92951,77.58017]],[[12.92951,77.58017],[12.92715,77.58022],[12.92637,77.58023],[12.92492,77.58025],[12.92402,77.58026],[12.92345,77.58027],[12.92213,77.58028],[12.92096,77.58029]],[[12.91522,77.57362],[12.9143,77.57347],[12.91314,77.57319],[12.9124,77.57299],[12.91167,77.57289],[12.91101,77.5729],[12.90896,77.57296],[12.90816,77.57304],[12.90748,77.57315]],[[12.90748,77.57315],[12.90664,77.57324],[12.90596,77.57332],[12.90531,77.57337],[12.90433,77.57329],[12.90363,77.57324],[12.90238,77.57344],[12.90178,77.57346],[12.90118,77.57335],[12.90028,77.5731],[12.89968,77.57292],[12.899,77.57255],[12.89776,77.57165],[12.89725,77.57126],[12.89679,77.57082],[12.89604,77.57014]],[[12.89604,77.57014],[12.89537,77.56955],[12.89453,77.56877],[12.89395,77.56821],[12.89322,77.56748],[12.89252,77.56672],[12.89199,77.56615]],[[12.89199,77.56615],[12.89128,77.56532],[12.89048,77.56443],[12.89009,77.564],[12.88974,77.56362]],[[12.88974,77.56362],[12.88894,77.5627],[12.88817,77.56181],[12.88772,77.56121],[12.88713,77.56041],[12.88667,77.55928],[12.88626,77.55799],[12.88589,77.55688]],[[12.88589,77.55688],[12.88571,77.55625],[12.88529,77.55492],[12.88467,77.55293],[12.88412,77.5511],[12.8839,77.55036],[12.88371,77.5496],[12.88333,77.54809],[12.88313,77.54752],[12.88275,77.54702],[12.88168,77.54651],[12.87941,77.5456]],[[12.87941,77.5456],[12.87752,77.54481],[12.87663,77.54442],[12.87614,77.54418],[12.87554,77.54366],[12.87505,77.54296],[12.8748,77.54235],[12.87431,77.54129],[12.87395,77.5407],[12.87344,77.54011],[12.87139,77.53842],[12.87073,77.53788],[12.86931,77.53675],[12.86706,77.53501]],[[12.86706,77.53501],[12.86604,77.53424],[12.86449,77.53302],[12.86397,77.53249],[12.86319,77.53143],[12.86277,77.53081],[12.8622,77.53029],[12.86167,77.52995],[12.86087,77.52948],[12.86026,77.52911],[12.85933,77.52857],[12.85842,77.528],[12.858,77.52769]]]},{"id":"yellow","name":"Yellow Line","color":"#F2C200","stations":[{"n":"Rashtreeya Vidyalaya Road","a":12.92096,"o":77.58009},{"n":"Ragigudda","a":12.91709,"o":77.5887},{"n":"Jayadeva Hospital","a":12.91676,"o":77.60044},{"n":"BTM Layout","a":12.9166,"o":77.60862},{"n":"Central Silk Board","a":12.91673,"o":77.62103},{"n":"Bommanahalli","a":12.9103,"o":77.6267},{"n":"Hongasandra","a":12.90133,"o":77.63224},{"n":"Kudlu Gate","a":12.88956,"o":77.63947},{"n":"Singasandra","a":12.88043,"o":77.64511},{"n":"Hosa Road","a":12.8704,"o":77.65275},{"n":"Beratena Agrahara","a":12.86357,"o":77.6582},{"n":"Electronic City","a":12.85628,"o":77.66374},{"n":"Infosys Foundation Konappana Agrahara","a":12.84609,"o":77.67145},{"n":"Huskur Road","a":12.83872,"o":77.67773},{"n":"Biocon Hebbagodi","a":12.82859,"o":77.68155},{"n":"Delta Electronics Bommasandra","a":12.81909,"o":77.68866}],"tracks":[[[12.92096,77.58009],[12.92023,77.58011],[12.91968,77.58016],[12.91912,77.5802],[12.91842,77.58021],[12.91786,77.58031],[12.91739,77.58067],[12.91716,77.58123],[12.91709,77.58362],[12.91706,77.58487],[12.91702,77.58671],[12.91711,77.58731],[12.91709,77.5887],[12.91707,77.58937],[12.91696,77.59005],[12.91693,77.59094],[12.91688,77.59402],[12.91686,77.59506],[12.91683,77.59649],[12.91682,77.59764],[12.9168,77.59867],[12.91676,77.60044],[12.91674,77.60189],[12.9167,77.60462],[12.91663,77.6069],[12.9166,77.60862],[12.91654,77.61069],[12.91655,77.61183],[12.91649,77.61395],[12.91641,77.61506],[12.91634,77.61586],[12.91626,77.61664],[12.91628,77.61757],[12.91629,77.61839],[12.91625,77.61895],[12.91628,77.61953],[12.91644,77.6201],[12.91673,77.62103],[12.91692,77.62161]]]}];</script>
+<script>window.PLACES=[{"n":"Srinidhi Hotel","c":"Hotel","a":12.89298,"o":77.4587,"d":0.56,"w":"","s":"Challaghatta"},{"n":"Kerala Cafe","c":"Hotel","a":12.89064,"o":77.45855,"d":0.8,"w":"","s":"Challaghatta"},{"n":"Hotel Grand Palais","c":"Hotel","a":12.88734,"o":77.46503,"d":1.19,"w":"","s":"Challaghatta"},{"n":"Venkateshwara Theatre","c":"Cinema","a":12.90644,"o":77.48278,"d":0.7,"w":"","s":"Kengeri"},{"n":"Robin Theatre","c":"Cinema","a":12.91597,"o":77.4793,"d":0.93,"w":"","s":"Kengeri Bus Terminal"},{"n":"Hotel Gowdru Mane","c":"Hotel","a":12.92499,"o":77.48468,"d":1.18,"w":"","s":"Kengeri Bus Terminal"},{"n":"bda apartments","c":"Apartments","a":12.91974,"o":77.49052,"d":0.63,"w":"","s":"Kengeri Bus Terminal"},{"n":"Sri Rama Ashraya Apartment","c":"Apartments","a":12.91035,"o":77.48615,"d":0.53,"w":"","s":"Kengeri Bus Terminal"},{"n":"Poornima Palace Convention Center Parking","c":"Parking","a":12.92613,"o":77.50185,"d":0.44,"w":"","s":"Pattanagere"},{"n":"Metro Cash & Carry Parking","c":"Parking","a":12.92655,"o":77.50222,"d":0.5,"w":"","s":"Pattanagere"},{"n":"Mindtree Global Village, Parking Area","c":"Parking","a":12.91681,"o":77.50403,"d":1.04,"w":"","s":"Pattanagere"},{"n":"Pioneer Jasmine","c":"Apartments","a":12.92946,"o":77.48523,"d":1.53,"w":"","s":"Pattanagere"},{"n":"Rajeshwari Sarvatraa","c":"Apartments","a":12.92739,"o":77.51711,"d":1.04,"w":"","s":"Jnanabharathi"},{"n":"Nanjundeshwara Residency RR5","c":"Apartments","a":12.92454,"o":77.51683,"d":1.31,"w":"","s":"Jnanabharathi"},{"n":"Gopalan Arcade Mall","c":"Mall","a":12.93559,"o":77.51772,"d":0.24,"w":"","s":"Rajarajeshwari Nagar"},{"n":"Gopalan Cinemas","c":"Cinema","a":12.9358,"o":77.51779,"d":0.22,"w":"","s":"Rajarajeshwari Nagar"},{"n":"Celestial Heights","c":"Hotel","a":12.93405,"o":77.53447,"d":1.32,"w":"","s":"Pantharapalya - Nayandahalli"},{"n":"PES South Indian Mess","c":"Hotel","a":12.93335,"o":77.53501,"d":1.42,"w":"","s":"Pantharapalya - Nayandahalli"},{"n":"Shravanthi Sunny Apts","c":"Apartments","a":12.93221,"o":77.53789,"d":1.74,"w":"","s":"Pantharapalya - Nayandahalli"},{"n":"Vasundhara Kuteera","c":"Apartments","a":12.93263,"o":77.53668,"d":1.61,"w":"","s":"Pantharapalya - Nayandahalli"},{"n":"Nilugal Homes","c":"Apartments","a":12.956,"o":77.52246,"d":1.32,"w":"","s":"Mysore Road"},{"n":"Shobha Talkies","c":"Cinema","a":12.95745,"o":77.54329,"d":0.91,"w":"","s":"Deepanjali Nagar"},{"n":"Rosewood International Hotel","c":"Hotel","a":12.95292,"o":77.54505,"d":0.88,"w":"","s":"Deepanjali Nagar"},{"n":"PEACE PARADISE","c":"Apartments","a":12.95623,"o":77.53491,"d":0.52,"w":"","s":"Deepanjali Nagar"},{"n":"Skyline City Tower Block","c":"Apartments","a":12.96134,"o":77.52442,"d":0.99,"w":"","s":"Attiguppe"},{"n":"Alakananda Apartment","c":"Apartments","a":12.96063,"o":77.51906,"d":1.58,"w":"","s":"Attiguppe"},{"n":"Santhosh Talkies","c":"Cinema","a":12.96304,"o":77.54394,"d":1.13,"w":"","s":"Vijayanagar"},{"n":"CYCD","c":"Hotel","a":12.96734,"o":77.54278,"d":0.71,"w":"","s":"Vijayanagar"},{"n":"Vaibhav Grand Palace","c":"Apartments","a":12.97252,"o":77.53733,"d":0.18,"w":"","s":"Vijayanagar"},{"n":"Veeresh Talkies","c":"Cinema","a":12.97697,"o":77.5458,"d":0.31,"w":"","s":"Sri Balagangadharanatha Swamiji Stn., Hosahalli"},{"n":"Sujatha Talkies","c":"Cinema","a":12.96187,"o":77.54716,"d":1.39,"w":"","s":"Sri Balagangadharanatha Swamiji Stn., Hosahalli"},{"n":"Kashyap Lodge","c":"Hotel","a":12.98723,"o":77.53977,"d":1.58,"w":"","s":"Sri Balagangadharanatha Swamiji Stn., Hosahalli"},{"n":"Sapthagiri","c":"Apartments","a":12.98364,"o":77.5401,"d":1.21,"w":"","s":"Sri Balagangadharanatha Swamiji Stn., Hosahalli"},{"n":"Pride Pavilion","c":"Apartments","a":12.98548,"o":77.54861,"d":1.29,"w":"","s":"Sri Balagangadharanatha Swamiji Stn., Hosahalli"},{"n":"GT World Mall","c":"Mall","a":12.97355,"o":77.55169,"d":0.46,"w":"","s":"Magadi Road"},{"n":"Golden Heights Mall","c":"Mall","a":12.98292,"o":77.55945,"d":0.92,"w":"","s":"Magadi Road"},{"n":"Gopalan Mall","c":"Mall","a":12.95852,"o":77.55348,"d":1.92,"w":"","s":"Magadi Road"},{"n":"City Armed Reserve Police Quarters","c":"Apartments","a":12.96121,"o":77.55758,"d":1.62,"w":"","s":"Magadi Road"},{"n":"ETA Namma Mall","c":"Mall","a":12.96568,"o":77.56162,"d":1.21,"w":"","s":"Krantivira Sangolli Rayanna Railway Station"},{"n":"Cinepolis","c":"Cinema","a":12.98169,"o":77.56328,"d":0.68,"w":"","s":"Krantivira Sangolli Rayanna Railway Station"},{"n":"Sujatha Theater","c":"Cinema","a":12.98301,"o":77.56184,"d":0.88,"w":"","s":"Krantivira Sangolli Rayanna Railway Station"},{"n":"Grand Majestic Mall","c":"Mall","a":12.9774,"o":77.57623,"d":0.39,"w":"","s":"Nadaprabhu Kempegowda Station, Majestic (Purple Line)"},{"n":"Anupama Theatre","c":"Cinema","a":12.97616,"o":77.57535,"d":0.25,"w":"","s":"Nadaprabhu Kempegowda Station, Majestic (Purple Line)"},{"n":"Shree Lodge","c":"Hotel","a":12.97561,"o":77.57518,"d":0.23,"w":"","s":"Nadaprabhu Kempegowda Station, Majestic (Purple Line)"},{"n":"Bhoomika Theatre","c":"Cinema","a":12.97398,"o":77.57975,"d":0.49,"w":"","s":"Sir M. Visvesvaraya Stn., Central College"},{"n":"Hotel Bangalore Gate","c":"Hotel","a":12.97358,"o":77.57949,"d":0.52,"w":"","s":"Sir M. Visvesvaraya Stn., Central College"},{"n":"TAP Paradise Hotel","c":"Hotel","a":12.9726,"o":77.57941,"d":0.56,"w":"","s":"Sir M. Visvesvaraya Stn., Central College"},{"n":"Skyline Eternity","c":"Apartments","a":12.96098,"o":77.59625,"d":2.0,"w":"","s":"Sir M. Visvesvaraya Stn., Central College"},{"n":"UB City","c":"Mall","a":12.97231,"o":77.59594,"d":0.87,"w":"Q3595524","s":"Dr. B. R. Ambedkar Station, Vidhana Soudha"},{"n":"Radisson Blu Hotel, Atria","c":"Hotel","a":12.98,"o":77.58619,"d":0.62,"w":"","s":"Dr. B. R. Ambedkar Station, Vidhana Soudha"},{"n":"JW Marriott","c":"Hotel","a":12.97239,"o":77.59493,"d":0.81,"w":"","s":"Dr. B. R. Ambedkar Station, Vidhana Soudha"},{"n":"Lalazar","c":"Apartments","a":12.98534,"o":77.58797,"d":0.82,"w":"","s":"Dr. B. R. Ambedkar Station, Vidhana Soudha"},{"n":"Krishna Apartments","c":"Apartments","a":12.98655,"o":77.5921,"d":0.84,"w":"","s":"Dr. B. R. Ambedkar Station, Vidhana Soudha"},{"n":"Elgin Cinema","c":"Cinema","a":12.98516,"o":77.60163,"d":0.64,"w":"","s":"Cubbon Park"},{"n":"Mastiff Hotel","c":"Hotel","a":12.98279,"o":77.59627,"d":0.25,"w":"","s":"Cubbon Park"},{"n":"The Capitol","c":"Hotel","a":12.98224,"o":77.59446,"d":0.37,"w":"","s":"Cubbon Park"},{"n":"Park View Apartment","c":"Apartments","a":12.99485,"o":77.6078,"d":1.9,"w":"","s":"Cubbon Park"},{"n":"Anmol Sankeshar Kripa","c":"Apartments","a":12.99186,"o":77.59117,"d":1.4,"w":"","s":"Cubbon Park"},{"n":"Garuda Mall","c":"Mall","a":12.97004,"o":77.60968,"d":0.65,"w":"Q3811237","s":"Mahatma Gandhi Road"},{"n":"Shrungar Shopping Center","c":"Mall","a":12.97523,"o":77.60557,"d":0.18,"w":"","s":"Mahatma Gandhi Road"},{"n":"5th Avenue Mall","c":"Mall","a":12.97319,"o":77.60699,"d":0.25,"w":"","s":"Mahatma Gandhi Road"},{"n":"Rose Ville","c":"Apartments","a":12.96092,"o":77.60382,"d":1.66,"w":"","s":"Mahatma Gandhi Road"},{"n":"Lakshmi","c":"Apartments","a":12.96359,"o":77.59838,"d":1.63,"w":"","s":"Mahatma Gandhi Road"},{"n":"Conrad Bengaluru","c":"Hotel","a":12.97534,"o":77.62067,"d":0.47,"w":"Q99454646","s":"Trinity"},{"n":"One M G Road","c":"Mall","a":12.97342,"o":77.62036,"d":0.37,"w":"","s":"Trinity"},{"n":"Lido Mall","c":"Mall","a":12.97345,"o":77.62175,"d":0.51,"w":"","s":"Trinity"},{"n":"Government Science College Boys' Hostel","c":"Apartments","a":12.97214,"o":77.61812,"d":0.16,"w":"","s":"Trinity"},{"n":"Ligoury Court Apartments","c":"Apartments","a":12.96508,"o":77.61466,"d":0.92,"w":"","s":"Trinity"},{"n":"Palmtree","c":"Hotel","a":12.97933,"o":77.62917,"d":0.41,"w":"","s":"Halasuru"},{"n":"Bhadra Landmark","c":"Apartments","a":12.97448,"o":77.62485,"d":0.3,"w":"","s":"Halasuru"},{"n":"Kolimi Heights","c":"Apartments","a":12.98087,"o":77.62911,"d":0.55,"w":"","s":"Halasuru"},{"n":"City Centre Residency","c":"Hotel","a":12.97924,"o":77.63743,"d":0.17,"w":"","s":"Indiranagar"},{"n":"The Himalayan Inn","c":"Hotel","a":12.97871,"o":77.63694,"d":0.19,"w":"","s":"Indiranagar"},{"n":"Himalayan Inn","c":"Hotel","a":12.97867,"o":77.63697,"d":0.19,"w":"","s":"Indiranagar"},{"n":"Musuri Apartments","c":"Apartments","a":12.96067,"o":77.6377,"d":1.97,"w":"","s":"Indiranagar"},{"n":"Nagarjuna Spectrum","c":"Apartments","a":12.97486,"o":77.64628,"d":0.91,"w":"","s":"Indiranagar"},{"n":"The Olive Hotel","c":"Hotel","a":12.98203,"o":77.6457,"d":0.44,"w":"","s":"Swami Vivekananda Road"},{"n":"UPAR Hotels Near Bagmane Tech Park - Indiranagar","c":"Hotel","a":12.97691,"o":77.6539,"d":1.4,"w":"","s":"Swami Vivekananda Road"},{"n":"Bhairavi Drupad","c":"Apartments","a":12.97188,"o":77.65622,"d":1.99,"w":"","s":"Swami Vivekananda Road"},{"n":"Maple Apartments","c":"Apartments","a":12.98217,"o":77.64498,"d":0.42,"w":"","s":"Swami Vivekananda Road"},{"n":"Bagmane Tech Park","c":"Tech park","a":12.97878,"o":77.66127,"d":1.64,"w":"","s":"Baiyappanahalli"},{"n":"Byappanahalli Station Parking","c":"Parking","a":12.99241,"o":77.65251,"d":0.19,"w":"","s":"Baiyappanahalli"},{"n":"Shraddha Silveroak","c":"Apartments","a":12.99115,"o":77.66087,"d":0.92,"w":"","s":"Baiyappanahalli"},{"n":"Shraddha Oak Tree","c":"Apartments","a":12.99143,"o":77.66091,"d":0.93,"w":"","s":"Baiyappanahalli"},{"n":"Gopalan Grand Mall","c":"Mall","a":12.99344,"o":77.66404,"d":0.59,"w":"","s":"Benniganahalli"},{"n":"Gopalan Signature Mall","c":"Mall","a":12.99294,"o":77.66151,"d":0.85,"w":"","s":"Benniganahalli"},{"n":"Gopalan Cinemas","c":"Cinema","a":12.99342,"o":77.66411,"d":0.59,"w":"","s":"Benniganahalli"},{"n":"Saptagiri Maharishi Apartments","c":"Apartments","a":12.99019,"o":77.66643,"d":0.74,"w":"","s":"Benniganahalli"},{"n":"Pushpanjali Theatre","c":"Cinema","a":12.99799,"o":77.67521,"d":0.36,"w":"","s":"Krishnarajapura"},{"n":"Shree Lakshmi Theater","c":"Cinema","a":13.01031,"o":77.6739,"d":1.23,"w":"","s":"Krishnarajapura"},{"n":"New Brindavan Hotel","c":"Hotel","a":13.00769,"o":77.68369,"d":1.07,"w":"","s":"Krishnarajapura"},{"n":"VPL Homes","c":"Apartments","a":12.99281,"o":77.68399,"d":1.03,"w":"","s":"Krishnarajapura"},{"n":"Vars splendid","c":"Apartments","a":12.99887,"o":77.67513,"d":0.32,"w":"","s":"Krishnarajapura"},{"n":"VR Bengaluru","c":"Mall","a":12.99634,"o":77.69534,"d":0.25,"w":"","s":"Singayyanapalya"},{"n":"Phoenix Market City","c":"Mall","a":12.99697,"o":77.69647,"d":0.38,"w":"","s":"Singayyanapalya"},{"n":"Bagmane Rio Business Park","c":"Tech park","a":12.98259,"o":77.69148,"d":1.55,"w":"","s":"Singayyanapalya"},{"n":"Samhita Serenity","c":"Apartments","a":12.98171,"o":77.69139,"d":1.65,"w":"","s":"Singayyanapalya"},{"n":"YSR Skyline","c":"Apartments","a":12.98687,"o":77.68885,"d":1.16,"w":"","s":"Singayyanapalya"},{"n":"Bhoruka Tech Park","c":"Tech park","a":12.99404,"o":77.70547,"d":0.17,"w":"","s":"Garudacharpalya"},{"n":"V Cinemas - Vijayalakshmi Theater","c":"Cinema","a":12.99345,"o":77.70189,"d":0.24,"w":"","s":"Garudacharpalya"},{"n":"Visitor Parking","c":"Parking","a":12.99415,"o":77.70566,"d":0.19,"w":"","s":"Garudacharpalya"},{"n":"E block","c":"Apartments","a":12.99099,"o":77.70367,"d":0.27,"w":"","s":"Garudacharpalya"},{"n":"G Block","c":"Apartments","a":12.99056,"o":77.70157,"d":0.41,"w":"","s":"Garudacharpalya"},{"n":"Rathi Legacy - Rohan Tech Park","c":"Tech park","a":12.98598,"o":77.70933,"d":0.33,"w":"","s":"Hoodi"},{"n":"Bhagini Residency","c":"Hotel","a":12.98962,"o":77.71319,"d":0.27,"w":"","s":"Hoodi"},{"n":"Purvi medows","c":"Apartments","a":12.99343,"o":77.71741,"d":0.89,"w":"","s":"Hoodi"},{"n":"Punith Nilaya","c":"Apartments","a":12.99315,"o":77.7172,"d":0.85,"w":"","s":"Hoodi"},{"n":"Bagmane Constellation Business Park","c":"Tech park","a":12.98131,"o":77.69774,"d":1.21,"w":"","s":"Seetharampalya"},{"n":"Keys Select Hotel","c":"Hotel","a":12.97944,"o":77.71002,"d":0.17,"w":"","s":"Seetharampalya"},{"n":"Earth Hotels","c":"Hotel","a":12.97787,"o":77.71192,"d":0.44,"w":"","s":"Seetharampalya"},{"n":"Myspace Akshaya","c":"Apartments","a":12.97491,"o":77.70174,"d":1.0,"w":"","s":"Seetharampalya"},{"n":"Chinnu Paradise Apartment","c":"Apartments","a":12.97307,"o":77.69957,"d":1.31,"w":"","s":"Seetharampalya"},{"n":"Brookfield Mall","c":"Mall","a":12.96613,"o":77.71789,"d":1.28,"w":"","s":"Kundalahalli"},{"n":"B.S.A. Tech Park","c":"Tech park","a":12.98078,"o":77.71432,"d":0.41,"w":"","s":"Kundalahalli"},{"n":"Gayatri Tech Park","c":"Tech park","a":12.97284,"o":77.72006,"d":0.68,"w":"","s":"Kundalahalli"},{"n":"SD Comforts Studio Rooms","c":"Apartments","a":12.97358,"o":77.71482,"d":0.46,"w":"","s":"Kundalahalli"},{"n":"Hemanth Spandana","c":"Apartments","a":12.9605,"o":77.7161,"d":1.9,"w":"","s":"Kundalahalli"},{"n":"Skora Tech Park","c":"Tech park","a":12.97929,"o":77.72437,"d":0.32,"w":"","s":"Nallurahalli"},{"n":"JP Tech Park","c":"Tech park","a":12.97723,"o":77.72848,"d":0.35,"w":"","s":"Nallurahalli"},{"n":"Akshay Tech Park","c":"Tech park","a":12.97967,"o":77.72439,"d":0.36,"w":"","s":"Nallurahalli"},{"n":"SS Co-Living","c":"Apartments","a":12.96623,"o":77.73331,"d":1.44,"w":"","s":"Nallurahalli"},{"n":"Nexus Shantinekatan","c":"Mall","a":12.98953,"o":77.72807,"d":0.87,"w":"","s":"Sri Sathya Sai Hospital"},{"n":"Microchip Tech Park","c":"Tech park","a":12.98202,"o":77.72129,"d":0.69,"w":"","s":"Sri Sathya Sai Hospital"},{"n":"Prestige Featherlite Tech Park","c":"Tech park","a":12.98147,"o":77.72125,"d":0.7,"w":"","s":"Sri Sathya Sai Hospital"},{"n":"Park Square Mall","c":"Mall","a":12.98699,"o":77.73642,"d":0.22,"w":"","s":"Pattandur Agrahara"},{"n":"Brigade Tech Park","c":"Tech park","a":12.98637,"o":77.7398,"d":0.21,"w":"","s":"Pattandur Agrahara"},{"n":"Subramanya Tech Park","c":"Tech park","a":12.98633,"o":77.73297,"d":0.6,"w":"","s":"Pattandur Agrahara"},{"n":"Titanium Tech Park","c":"Tech park","a":12.98799,"o":77.74685,"d":0.29,"w":"","s":"Kadugodi Tree Park"},{"n":"GR Salarpuria Tech Park","c":"Tech park","a":12.98532,"o":77.74353,"d":0.44,"w":"","s":"Kadugodi Tree Park"},{"n":"HM Tech Park","c":"Tech park","a":12.98303,"o":77.75115,"d":0.48,"w":"","s":"Kadugodi Tree Park"},{"n":"Chelli Poise","c":"Apartments","a":12.96902,"o":77.74521,"d":1.85,"w":"","s":"Kadugodi Tree Park"},{"n":"East Lynne Apartments","c":"Apartments","a":12.97029,"o":77.74891,"d":1.7,"w":"","s":"Kadugodi Tree Park"},{"n":"Building 5 Shoba Habitech Apartments","c":"Apartments","a":12.98243,"o":77.75364,"d":0.57,"w":"","s":"Hopefarm Channasandra"},{"n":"Building 2 Shoba Habitech Apartments","c":"Apartments","a":12.98214,"o":77.75446,"d":0.6,"w":"","s":"Hopefarm Channasandra"},{"n":"Kino Cinemas","c":"Cinema","a":13.01289,"o":77.76158,"d":1.93,"w":"","s":"Whitefield (Kadugodi)"},{"n":"Whitefield Station Car Parking","c":"Parking","a":12.9968,"o":77.76162,"d":0.41,"w":"","s":"Whitefield (Kadugodi)"},{"n":"Sri Lakshmi Venkateshwara Nilaya","c":"Apartments","a":13.00648,"o":77.75181,"d":1.35,"w":"","s":"Whitefield (Kadugodi)"},{"n":"Ruchira Lilium","c":"Apartments","a":12.99728,"o":77.76302,"d":0.57,"w":"","s":"Whitefield (Kadugodi)"},{"n":"Sai Pavitra Amogh","c":"Apartments","a":13.06329,"o":77.49856,"d":1.53,"w":"","s":"Manjunathanagara"},{"n":"The Ventura Grand Hotel","c":"Hotel","a":13.05419,"o":77.50844,"d":1.13,"w":"","s":"Nagasandra"},{"n":"Janapriya Heights Apartments","c":"Apartments","a":13.05975,"o":77.50843,"d":1.59,"w":"","s":"Nagasandra"},{"n":"Sobha Elite","c":"Apartments","a":13.04564,"o":77.50081,"d":0.27,"w":"","s":"Nagasandra"},{"n":"Bharathi Theatre","c":"Cinema","a":13.04171,"o":77.51757,"d":0.35,"w":"","s":"Jalahalli"},{"n":"Pratham Casa Serene","c":"Apartments","a":13.04185,"o":77.51887,"d":0.29,"w":"","s":"Jalahalli"},{"n":"SUPREME HOTEL","c":"Hotel","a":13.02848,"o":77.51998,"d":1.06,"w":"","s":"Peenya Industry"},{"n":"Polaris","c":"Apartments","a":13.04622,"o":77.5371,"d":1.53,"w":"","s":"Peenya"},{"n":"Swagath Murali Cinema","c":"Cinema","a":13.03844,"o":77.55249,"d":1.67,"w":"","s":"Goraguntepalya"},{"n":"The Fern Residency - Yeshwanthpur","c":"Hotel","a":13.02716,"o":77.54386,"d":0.31,"w":"","s":"Goraguntepalya"},{"n":"Vinyaas Virtue","c":"Apartments","a":13.0441,"o":77.54677,"d":1.87,"w":"","s":"Goraguntepalya"},{"n":"Vaishnavi Sapphire Centre","c":"Mall","a":13.02463,"o":77.54875,"d":0.18,"w":"","s":"Yeshwantpur"},{"n":"PVR Cinemas","c":"Cinema","a":13.02485,"o":77.54846,"d":0.22,"w":"","s":"Yeshwantpur"},{"n":"Govardhana","c":"Cinema","a":13.02167,"o":77.55129,"d":0.25,"w":"","s":"Yeshwantpur"},{"n":"Alpine Block","c":"Apartments","a":13.02651,"o":77.54718,"d":0.45,"w":"","s":"Yeshwantpur"},{"n":"@home","c":"Mall","a":13.01223,"o":77.55393,"d":0.28,"w":"","s":"Sandal Soap Factory"},{"n":"Orion Mall","c":"Mall","a":13.01096,"o":77.55522,"d":0.44,"w":"","s":"Sandal Soap Factory"},{"n":"Gopal Theatre","c":"Cinema","a":13.0172,"o":77.55624,"d":0.37,"w":"","s":"Sandal Soap Factory"},{"n":"HM Prudence Hall","c":"Apartments","a":13.00941,"o":77.56426,"d":1.26,"w":"","s":"Sandal Soap Factory"},{"n":"Aranya Kuteera","c":"Apartments","a":13.00993,"o":77.56718,"d":1.52,"w":"","s":"Sandal Soap Factory"},{"n":"Hotel Vande Matharam","c":"Hotel","a":13.01054,"o":77.55042,"d":0.33,"w":"","s":"Mahalakshmi"},{"n":"Bloom Hotel","c":"Hotel","a":13.01073,"o":77.55042,"d":0.34,"w":"","s":"Mahalakshmi"},{"n":"Minla Hotel","c":"Hotel","a":13.01089,"o":77.55051,"d":0.36,"w":"","s":"Mahalakshmi"},{"n":"Navarang","c":"Cinema","a":12.99785,"o":77.55278,"d":0.45,"w":"","s":"Rajajinagar"},{"n":"MySpace Express Balaji Residency","c":"Hotel","a":12.99739,"o":77.55004,"d":0.35,"w":"","s":"Rajajinagar"},{"n":"The Grand Coral","c":"Hotel","a":12.99657,"o":77.55083,"d":0.46,"w":"","s":"Rajajinagar"},{"n":"Pushpagiri","c":"Apartments","a":13.00033,"o":77.54685,"d":0.31,"w":"","s":"Rajajinagar"},{"n":"Cafe Coffee Day","c":"Hotel","a":12.99594,"o":77.55489,"d":0.36,"w":"","s":"Mahakavi Kuvempu Road"},{"n":"Mallika Residency","c":"Hotel","a":12.99175,"o":77.55766,"d":0.76,"w":"","s":"Mahakavi Kuvempu Road"},{"n":"Mathrushree Residency","c":"Hotel","a":12.9899,"o":77.55336,"d":1.03,"w":"","s":"Mahakavi Kuvempu Road"},{"n":"Kamakshi Silk","c":"Mall","a":13.0006,"o":77.56945,"d":0.81,"w":"","s":"Srirampura"},{"n":"Manyavar Mohey","c":"Mall","a":13.00477,"o":77.56938,"d":1.13,"w":"","s":"Srirampura"},{"n":"Maithree Apartments","c":"Apartments","a":13.00459,"o":77.56699,"d":0.98,"w":"","s":"Srirampura"},{"n":"Chitrakoot Apartments","c":"Apartments","a":13.0084,"o":77.56758,"d":1.4,"w":"","s":"Srirampura"},{"n":"RainTree","c":"Mall","a":12.99429,"o":77.5843,"d":1.53,"w":"","s":"Mantri Square Sampige Road"},{"n":"INOX Malleshwaram - Mantri Square","c":"Cinema","a":12.99205,"o":77.57063,"d":0.18,"w":"","s":"Mantri Square Sampige Road"},{"n":"Sampige Theatre","c":"Cinema","a":12.99312,"o":77.57107,"d":0.3,"w":"","s":"Mantri Square Sampige Road"},{"n":"Padmashree Apartments","c":"Apartments","a":12.9921,"o":77.5749,"d":0.48,"w":"","s":"Mantri Square Sampige Road"},{"n":"Vaishanavi Apartment","c":"Apartments","a":12.99649,"o":77.57272,"d":0.7,"w":"","s":"Mantri Square Sampige Road"},{"n":"Sapna Theater","c":"Cinema","a":12.97432,"o":77.57622,"d":0.35,"w":"","s":"Nadaprabhu Kempegowda Station, Majestic (Green Line)"},{"n":"Santosh Theater","c":"Cinema","a":12.97477,"o":77.5763,"d":0.36,"w":"","s":"Nadaprabhu Kempegowda Station, Majestic (Green Line)"},{"n":"Kalpana Cinema","c":"Cinema","a":12.97448,"o":77.57721,"d":0.46,"w":"","s":"Nadaprabhu Kempegowda Station, Majestic (Green Line)"},{"n":"Vijaya Laxmi Theatre","c":"Cinema","a":12.97039,"o":77.57448,"d":0.39,"w":"","s":"Chickpete"},{"n":"Super talkies","c":"Cinema","a":12.96777,"o":77.56989,"d":0.52,"w":"","s":"Chickpete"},{"n":"Madhu Lodge","c":"Hotel","a":12.97118,"o":77.57639,"d":0.51,"w":"","s":"Chickpete"},{"n":"Vinayaka Talkies","c":"Cinema","a":12.96333,"o":77.56638,"d":0.94,"w":"","s":"Krishna Rajendra Market"},{"n":"Swagath Poornima","c":"Cinema","a":12.96091,"o":77.58721,"d":1.36,"w":"","s":"Krishna Rajendra Market"},{"n":"Prakash Cafe & Lodge","c":"Hotel","a":12.96041,"o":77.57095,"d":0.41,"w":"","s":"Krishna Rajendra Market"},{"n":"Gopalan Pushpanjali","c":"Apartments","a":12.95941,"o":77.56904,"d":0.63,"w":"","s":"Krishna Rajendra Market"},{"n":"Jain Bhavan","c":"Hotel","a":12.94615,"o":77.57343,"d":0.49,"w":"","s":"National College"},{"n":"Treebo Akshaya Bull Temple","c":"Hotel","a":12.94413,"o":77.56804,"d":0.94,"w":"","s":"National College"},{"n":"BMS College Parking","c":"Parking","a":12.94131,"o":77.56649,"d":1.29,"w":"","s":"National College"},{"n":"Arihanth Castle","c":"Apartments","a":12.95326,"o":77.56957,"d":0.54,"w":"","s":"National College"},{"n":"Jineshwar Enclave Apartment","c":"Apartments","a":12.95656,"o":77.56464,"d":1.19,"w":"","s":"National College"},{"n":"Urvashi","c":"Cinema","a":12.95609,"o":77.58544,"d":1.21,"w":"","s":"Lalbagh"},{"n":"Brigade Homestead","c":"Hotel","a":12.94314,"o":77.58488,"d":0.65,"w":"","s":"Lalbagh"},{"n":"AMM Residency","c":"Hotel","a":12.94929,"o":77.59311,"d":1.45,"w":"","s":"Lalbagh"},{"n":"Dadlani Mansion","c":"Apartments","a":12.9556,"o":77.59181,"d":1.63,"w":"","s":"Lalbagh"},{"n":"Nina Elite","c":"Apartments","a":12.94391,"o":77.57594,"d":0.53,"w":"","s":"Lalbagh"},{"n":"Hotel Grand Palace","c":"Hotel","a":12.94189,"o":77.58531,"d":0.7,"w":"","s":"South End Circle"},{"n":"Anand Sagar","c":"Hotel","a":12.93917,"o":77.57156,"d":0.93,"w":"","s":"South End Circle"},{"n":"Limra","c":"Hotel","a":12.93591,"o":77.59271,"d":1.39,"w":"","s":"South End Circle"},{"n":"Krishna Lake View","c":"Apartments","a":12.93462,"o":77.57554,"d":0.64,"w":"","s":"South End Circle"},{"n":"GR Lakeview","c":"Apartments","a":12.93431,"o":77.57494,"d":0.71,"w":"","s":"South End Circle"},{"n":"Garuda Swagath Mall","c":"Mall","a":12.92894,"o":77.59136,"d":1.22,"w":"","s":"Jayanagar"},{"n":"Inox","c":"Cinema","a":12.92906,"o":77.59137,"d":1.22,"w":"","s":"Jayanagar"},{"n":"The Resident","c":"Hotel","a":12.93316,"o":77.58332,"d":0.53,"w":"","s":"Jayanagar"},{"n":"Singhi Sapphite","c":"Apartments","a":12.92773,"o":77.57112,"d":1.0,"w":"","s":"Jayanagar"},{"n":"Nagashree Krishna Nilaya","c":"Apartments","a":12.92849,"o":77.57745,"d":0.32,"w":"","s":"Jayanagar"},{"n":"Olive Jayanagar","c":"Hotel","a":12.91843,"o":77.5811,"d":0.3,"w":"","s":"Rashtreeya Vidyalaya Road"},{"n":"Le Foliage","c":"Hotel","a":12.91696,"o":77.57918,"d":0.46,"w":"","s":"Rashtreeya Vidyalaya Road"},{"n":"Bhadra Landmark Jayanagar","c":"Apartments","a":12.92427,"o":77.58202,"d":0.41,"w":"","s":"Rashtreeya Vidyalaya Road"},{"n":"Avg Park Square","c":"Apartments","a":12.91603,"o":77.57795,"d":0.48,"w":"","s":"Banashankari"},{"n":"Aurick Boutique","c":"Hotel","a":12.90624,"o":77.57855,"d":0.6,"w":"","s":"Jaya Prakash Nagar"},{"n":"Sagar Hospital Parking","c":"Parking","a":12.90852,"o":77.56509,"d":0.88,"w":"","s":"Jaya Prakash Nagar"},{"n":"North Tower","c":"Apartments","a":12.90576,"o":77.57409,"d":0.22,"w":"","s":"Jaya Prakash Nagar"},{"n":"South Tower","c":"Apartments","a":12.90559,"o":77.57394,"d":0.23,"w":"","s":"Jaya Prakash Nagar"},{"n":"Ennar Diagnostics & Healthcare","c":"Parking","a":12.88494,"o":77.58263,"d":1.83,"w":"","s":"Yelachenahalli"},{"n":"Mayflower Block","c":"Apartments","a":12.89099,"o":77.5827,"d":1.47,"w":"","s":"Yelachenahalli"},{"n":"Brigade Palmsprings","c":"Apartments","a":12.89488,"o":77.5861,"d":1.74,"w":"","s":"Yelachenahalli"},{"n":"Vinayaka Theater","c":"Cinema","a":12.87507,"o":77.57019,"d":1.74,"w":"","s":"Konanakunte Cross"},{"n":"Sri Sai Paradise","c":"Apartments","a":12.87574,"o":77.56965,"d":1.65,"w":"","s":"Konanakunte Cross"},{"n":"Towers 1, 2, 3 - Prestige Lake Ridge","c":"Apartments","a":12.89595,"o":77.53992,"d":1.88,"w":"","s":"Doddakallasandra"},{"n":"Anand Aster","c":"Apartments","a":12.87352,"o":77.54303,"d":0.49,"w":"","s":"Vajarahalli"},{"n":"An Swagath Apartment","c":"Apartments","a":12.88514,"o":77.54174,"d":0.91,"w":"","s":"Vajarahalli"},{"n":"Nandini Pride","c":"Apartments","a":12.869,"o":77.53842,"d":0.27,"w":"","s":"Thalaghattapura"},{"n":"Mantri Junction","c":"Mall","a":12.91629,"o":77.59223,"d":0.39,"w":"","s":"Ragigudda"},{"n":"Sri Renuka Prasanna Theatre","c":"Cinema","a":12.91505,"o":77.58797,"d":0.24,"w":"","s":"Ragigudda"},{"n":"Inox","c":"Cinema","a":12.91624,"o":77.59242,"d":0.41,"w":"","s":"Ragigudda"},{"n":"Pruthvi Classic Apartments","c":"Apartments","a":12.9035,"o":77.58909,"d":1.51,"w":"","s":"Ragigudda"},{"n":"Jayanagar Enclave","c":"Apartments","a":12.92183,"o":77.59233,"d":0.66,"w":"","s":"Ragigudda"},{"n":"Gopalan Innovation Mall","c":"Mall","a":12.91434,"o":77.59945,"d":0.29,"w":"","s":"Jayadeva Hospital"},{"n":"Commerce @ Mantri","c":"Mall","a":12.91239,"o":77.60062,"d":0.49,"w":"","s":"Jayadeva Hospital"},{"n":"Nexus Vega City","c":"Mall","a":12.90767,"o":77.60119,"d":1.01,"w":"","s":"Jayadeva Hospital"},{"n":"Panchali","c":"Apartments","a":12.90678,"o":77.59739,"d":1.16,"w":"","s":"Jayadeva Hospital"},{"n":"Atithi Executive PG for Gents","c":"Apartments","a":12.90647,"o":77.60361,"d":1.2,"w":"","s":"Jayadeva Hospital"},{"n":"ND Fusion Mall","c":"Mall","a":12.91581,"o":77.61034,"d":0.21,"w":"","s":"BTM Layout"},{"n":"Lakshmi Theatre","c":"Cinema","a":12.92523,"o":77.60762,"d":0.97,"w":"","s":"BTM Layout"},{"n":"Balaji Theatre","c":"Cinema","a":12.92559,"o":77.60777,"d":1.01,"w":"","s":"BTM Layout"},{"n":"N.D. Pinnacle","c":"Apartments","a":12.91188,"o":77.60843,"d":0.53,"w":"","s":"BTM Layout"},{"n":"Kalpavruksha Student Housing Unit 3","c":"Apartments","a":12.93247,"o":77.61066,"d":1.78,"w":"","s":"BTM Layout"},{"n":"Davanam Sarovar Portico Suites","c":"Mall","a":12.9217,"o":77.62032,"d":0.56,"w":"","s":"Central Silk Board"},{"n":"Market Square Value Mall","c":"Mall","a":12.9219,"o":77.62031,"d":0.58,"w":"","s":"Central Silk Board"},{"n":"Market Square Mall","c":"Mall","a":12.9219,"o":77.62038,"d":0.58,"w":"","s":"Central Silk Board"},{"n":"Urbanrise Parking","c":"Parking","a":12.91541,"o":77.64401,"d":1.96,"w":"","s":"Bommanahalli"},{"n":"Miller's The Portrait","c":"Apartments","a":12.9175,"o":77.64262,"d":1.9,"w":"","s":"Bommanahalli"},{"n":"Nisar Manzil","c":"Apartments","a":12.90819,"o":77.62974,"d":0.4,"w":"","s":"Bommanahalli"},{"n":"AMR Tech Park","c":"Tech park","a":12.89916,"o":77.63096,"d":0.28,"w":"","s":"Hongasandra"},{"n":"Galaxy Paradise","c":"Cinema","a":12.89143,"o":77.62642,"d":1.27,"w":"","s":"Hongasandra"},{"n":"Pioneer Woodwinds","c":"Apartments","a":12.89202,"o":77.61666,"d":1.98,"w":"","s":"Hongasandra"},{"n":"Novel Tech Park","c":"Tech park","a":12.89151,"o":77.64128,"d":0.29,"w":"","s":"Kudlu Gate"},{"n":"AKR Tech Park","c":"Tech park","a":12.89222,"o":77.64228,"d":0.42,"w":"","s":"Kudlu Gate"},{"n":"Nd Olivia Apartment","c":"Apartments","a":12.89861,"o":77.65405,"d":1.88,"w":"","s":"Kudlu Gate"},{"n":"Vensa Royal Apartment","c":"Apartments","a":12.89932,"o":77.64947,"d":1.54,"w":"","s":"Kudlu Gate"},{"n":"Keys","c":"Hotel","a":12.87974,"o":77.64678,"d":0.2,"w":"","s":"Singasandra"},{"n":"Live100 Parking","c":"Parking","a":12.87885,"o":77.64565,"d":0.19,"w":"","s":"Singasandra"},{"n":"Aratt Girija Tower","c":"Apartments","a":12.87815,"o":77.63774,"d":0.84,"w":"","s":"Singasandra"},{"n":"YR Keerthi Residency","c":"Apartments","a":12.87344,"o":77.64545,"d":0.78,"w":"","s":"Singasandra"},{"n":"MSR Daffodils","c":"Apartments","a":12.8655,"o":77.64859,"d":0.71,"w":"","s":"Hosa Road"},{"n":"Pioneer Greenwoods","c":"Apartments","a":12.87132,"o":77.64465,"d":0.88,"w":"","s":"Hosa Road"},{"n":"Sri Sai","c":"Apartments","a":12.87382,"o":77.66848,"d":1.6,"w":"","s":"Beratena Agrahara"},{"n":"Sri Tirumala Symphony","c":"Apartments","a":12.85806,"o":77.65254,"d":0.87,"w":"","s":"Beratena Agrahara"},{"n":"360 Business Park","c":"Tech park","a":12.84344,"o":77.65606,"d":1.65,"w":"","s":"Electronic City"},{"n":"The Oterra Bengaluru Electronics City","c":"Hotel","a":12.85025,"o":77.66031,"d":0.77,"w":"","s":"Electronic City"},{"n":"Infosys Parking Lot","c":"Parking","a":12.84875,"o":77.66217,"d":0.86,"w":"","s":"Electronic City"},{"n":"Magnolia Sundance","c":"Apartments","a":12.85128,"o":77.65694,"d":0.92,"w":"","s":"Electronic City"},{"n":"Venkata Sahasra Apartment","c":"Apartments","a":12.84824,"o":77.65225,"d":1.54,"w":"","s":"Electronic City"},{"n":"Maruthi Concorde Tech Park","c":"Tech park","a":12.85033,"o":77.66997,"d":0.5,"w":"","s":"Infosys Foundation Konappana Agrahara"},{"n":"Helix Biotech Park","c":"Tech park","a":12.84383,"o":77.65747,"d":1.54,"w":"","s":"Infosys Foundation Konappana Agrahara"},{"n":"Seasons","c":"Hotel","a":12.84765,"o":77.67153,"d":0.17,"w":"","s":"Infosys Foundation Konappana Agrahara"},{"n":"M5 ECity Mall","c":"Mall","a":12.84198,"o":77.67682,"d":0.38,"w":"","s":"Huskur Road"},{"n":"Salarpuria Sattva Alexandria Tech Park","c":"Tech park","a":12.84144,"o":77.67739,"d":0.31,"w":"","s":"Huskur Road"},{"n":"PVR Inox Cinemas","c":"Cinema","a":12.84157,"o":77.67683,"d":0.33,"w":"","s":"Huskur Road"},{"n":"Paras Mallige","c":"Apartments","a":12.83728,"o":77.68719,"d":1.04,"w":"","s":"Huskur Road"},{"n":"Guesture Alta Vista Block A & B","c":"Apartments","a":12.83783,"o":77.67312,"d":0.51,"w":"","s":"Huskur Road"},{"n":"Sai Vishram","c":"Hotel","a":12.82458,"o":77.68115,"d":0.45,"w":"","s":"Biocon Hebbagodi"},{"n":"Mahendra Aarna Appartment Tower A2","c":"Apartments","a":12.83474,"o":77.69081,"d":1.22,"w":"","s":"Biocon Hebbagodi"},{"n":"Electra Park Apartments","c":"Apartments","a":12.8328,"o":77.68439,"d":0.56,"w":"","s":"Biocon Hebbagodi"},{"n":"The Lark","c":"Hotel","a":12.82169,"o":77.6871,"d":0.34,"w":"","s":"Delta Electronics Bommasandra"},{"n":"Fortune City","c":"Hotel","a":12.82288,"o":77.68586,"d":0.52,"w":"","s":"Delta Electronics Bommasandra"},{"n":"Hotel E-inn","c":"Hotel","a":12.81965,"o":77.6834,"d":0.57,"w":"","s":"Delta Electronics Bommasandra"}];window.PHOTOS={"st":{"Attiguppe":"https://upload.wikimedia.org/wikipedia/commons/4/43/Attiguppe_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","BTM Layout":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/BTM_Layout_metro_station_%28Nov_%2724%29.jpg/960px-BTM_Layout_metro_station_%28Nov_%2724%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Baiyappanahalli":"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Baiyappanahalli_metro_station_%28Nov_%2724%29.jpg/960px-Baiyappanahalli_metro_station_%28Nov_%2724%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Banashankari":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Banashankari_Metro_Station.jpg/960px-Banashankari_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Benniganahalli":"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Benniganahalli_metro_station_%28as_of_Sept_%2723%29.jpg/960px-Benniganahalli_metro_station_%28as_of_Sept_%2723%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Beratena Agrahara":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Beratena_Agrahara_metro_station_%28April_2026%29.jpg/960px-Beratena_Agrahara_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Biocon Hebbagodi":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Biocon_Hebbagodi_metro_station_%28July_%2725%29_-_1.jpg/960px-Biocon_Hebbagodi_metro_station_%28July_%2725%29_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Bommanahalli":"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Bommanahalli_metro_station_%28July_%2725%29_-_1.jpg/960px-Bommanahalli_metro_station_%28July_%2725%29_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Central Silk Board":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Central_Silk_Board_metro_station_%28July_%2725%29_-_1.jpg/960px-Central_Silk_Board_metro_station_%28July_%2725%29_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Challaghatta":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Challaghatta_metro_station_%28Platform%29.jpg/960px-Challaghatta_metro_station_%28Platform%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Chickpete":"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Chickpete_metro_station.jpg/960px-Chickpete_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Chikkabidarakallu":"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Chikkabidarakallu_metro_station_%28Feb_%2725%29.jpg/960px-Chikkabidarakallu_metro_station_%28Feb_%2725%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Cubbon Park":"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Cubbon_Park_Metro_station_interior.jpg/960px-Cubbon_Park_Metro_station_interior.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Dasarahalli":"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Dasarahalli_metro_station_%28Feb_%2725%29.jpg/960px-Dasarahalli_metro_station_%28Feb_%2725%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Deepanjali Nagar":"https://upload.wikimedia.org/wikipedia/commons/8/83/Deepanjali_Nagar_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","Delta Electronics Bommasandra":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Delta_Electronics_Bommasandra_metro%2C_Bangalore_%282025%29_01.jpg/960px-Delta_Electronics_Bommasandra_metro%2C_Bangalore_%282025%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Doddakallasandra":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Doddakallasandra_metro_station_%28as_of_Jul_%2722%29.jpg/960px-Doddakallasandra_metro_station_%28as_of_Jul_%2722%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Dr. B. R. Ambedkar Station, Vidhana Soudha":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Dr._B.R._Ambedkar_Stn.%2C_Vidhana_Soudha_metro_station.jpg/960px-Dr._B.R._Ambedkar_Stn.%2C_Vidhana_Soudha_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Electronic City":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Electronic_City_metro_station_%28April_2026%29.jpg/960px-Electronic_City_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Garudacharpalya":"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Garudacharapalya_Metro.jpg/960px-Garudacharapalya_Metro.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Goraguntepalya":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Goraguntepalya_metro_station_%28Feb_%2725%29.jpg/960px-Goraguntepalya_metro_station_%28Feb_%2725%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Halasuru":"https://upload.wikimedia.org/wikipedia/commons/9/95/Halasuru_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","Hongasandra":"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Hongasandra_metro_station_%28April_2026%29.jpg/960px-Hongasandra_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Hoodi":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Hoodi_Metro.jpg/960px-Hoodi_Metro.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Hopefarm Channasandra":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Hopefarm_Channasandra_metro_station_20230323_234856.jpg/960px-Hopefarm_Channasandra_metro_station_20230323_234856.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Hosa Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Hosa_Road_metro_station_%28April_2026%29.jpg/960px-Hosa_Road_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Huskur Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Huskur_Road_metro_station_%28April_2026%29.jpg/960px-Huskur_Road_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Infosys Foundation Konappana Agrahara":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Infosys_Foundation_Konappana_Agrahara_metro_station_%28July_%2725%29_-_1.jpg/960px-Infosys_Foundation_Konappana_Agrahara_metro_station_%28July_%2725%29_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Jalahalli":"https://upload.wikimedia.org/wikipedia/commons/a/a0/Jalahalli_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","Jaya Prakash Nagar":"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/J._P._Nagar_metro_station%2C_Bangalore_%282024%29_06.jpg/960px-J._P._Nagar_metro_station%2C_Bangalore_%282024%29_06.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Jayadeva Hospital":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Jayadeva_Hospital_metro_station%2C_Bangalore_%282025%29_22.jpg/960px-Jayadeva_Hospital_metro_station%2C_Bangalore_%282025%29_22.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Jayanagar":"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Jayanagar_metro_station_%28as_of_Feb_%2722%29.jpg/960px-Jayanagar_metro_station_%28as_of_Feb_%2722%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Jnanabharathi":"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Jnanabharathi_Metro_Station_%28Entrance_A%29.jpg/960px-Jnanabharathi_Metro_Station_%28Entrance_A%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Kadugodi Tree Park":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Kadugodi_Tree_Park_Metro.jpg/960px-Kadugodi_Tree_Park_Metro.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Kengeri":"https://upload.wikimedia.org/wikipedia/commons/f/fb/Kengeri_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","Kengeri Bus Terminal":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Kengeri_Bus_Terminal_%28nameboard%29.jpg/960px-Kengeri_Bus_Terminal_%28nameboard%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Konanakunte Cross":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Konanakunte_Cross_metro_station_%28Namma_metro%2C_2021%29.jpg/960px-Konanakunte_Cross_metro_station_%28Namma_metro%2C_2021%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Krantivira Sangolli Rayanna Railway Station":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Krantivira_Sangoli_Rayanna_Railway_Station.jpg/960px-Krantivira_Sangoli_Rayanna_Railway_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Krishna Rajendra Market":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Krishna_Rajendra_Market_metro_station%2C_Bangalore_%282024%29_01.jpg/960px-Krishna_Rajendra_Market_metro_station%2C_Bangalore_%282024%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Krishnarajapura":"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Krishnarajapura_metro_station_%28April_2026%29.jpg/960px-Krishnarajapura_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Kudlu Gate":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Kudlu_Gate_metro_station_%28April_2026%29.jpg/960px-Kudlu_Gate_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Kundalahalli":"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Kundalahalli_metro_station%2C_Bangalore_%282025%29_02.jpg/960px-Kundalahalli_metro_station%2C_Bangalore_%282025%29_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Lalbagh":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Lalbagh_metro_station%2C_Bangalore_%282025%29_01.jpg/960px-Lalbagh_metro_station%2C_Bangalore_%282025%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Madavara":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Madavara_metro_station_%282026%29_01.jpg/960px-Madavara_metro_station_%282026%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Magadi Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Magadi_Road_Metro_Station.jpg/960px-Magadi_Road_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Mahakavi Kuvempu Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Kuvempu_Road_metro_station.jpg/960px-Kuvempu_Road_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Mahalakshmi":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Mahalakshmi_metro_station.jpg/960px-Mahalakshmi_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Manjunathanagara":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Manjunatha_Nagara_metro_station_%28Feb_%2725%29.jpg/960px-Manjunatha_Nagara_metro_station_%28Feb_%2725%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Mantri Square Sampige Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mantri_Square_Sampige_Road_Metro-Platform_View1.jpg/960px-Mantri_Square_Sampige_Road_Metro-Platform_View1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Mysore Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Mysore_Road.jpg/960px-Mysore_Road.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Nagasandra":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Nagasandra_metro_station_%28as_of_Aug_%2722%29.jpg/960px-Nagasandra_metro_station_%28as_of_Aug_%2722%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","National College":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/National_college_metro_station_2.jpg/960px-National_college_metro_station_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Pattanagere":"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Pattanagere_metro_station_%28as_of_May_%2722%29.jpg/960px-Pattanagere_metro_station_%28as_of_May_%2722%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Pattandur Agrahara":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Pattandur_Agrahara_metro_station_%28Platform%29.jpg/960px-Pattandur_Agrahara_metro_station_%28Platform%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Peenya":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Peenya_metro_station.jpg/960px-Peenya_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Peenya Industry":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Peenya_Industry.jpg/960px-Peenya_Industry.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Ragigudda":"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Ragigudda_metro_station_%282026%29_01.jpg/960px-Ragigudda_metro_station_%282026%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Rajajinagar":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Rajajinagar_metro_station.jpg/960px-Rajajinagar_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Rajarajeshwari Nagar":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Rajarajeshwari_Nagar_metro_station_%282024%29_01.jpg/960px-Rajarajeshwari_Nagar_metro_station_%282024%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Rashtreeya Vidyalaya Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Rashtreeya_Vidyalaya_Road_metro_station_%28Mar_%2725%29.jpg/960px-Rashtreeya_Vidyalaya_Road_metro_station_%28Mar_%2725%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Sandal Soap Factory":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Sandal_Soap_Factory_metro_station%2C_Bangalore_%282025%29_01.jpg/960px-Sandal_Soap_Factory_metro_station%2C_Bangalore_%282025%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Silk Institute":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Silk_Institute_metro_station%2C_Bangalore_%282025%29.jpg/960px-Silk_Institute_metro_station%2C_Bangalore_%282025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Singasandra":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Singasandra_metro_station_%28April_2026%29.jpg/960px-Singasandra_metro_station_%28April_2026%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Singayyanapalya":"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Singayyanapalya_metro_station.jpg/960px-Singayyanapalya_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","South End Circle":"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Southend_Circle_metro_station.jpg/960px-Southend_Circle_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Sri Sathya Sai Hospital":"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Sri_Sathya_Sai_Hospital_metro_station_%28Mar_%2723%29.jpg/960px-Sri_Sathya_Sai_Hospital_metro_station_%28Mar_%2723%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Srirampura":"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Srirampura_metro_station.jpg/960px-Srirampura_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Swami Vivekananda Road":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Swami_Vivekananda_Road_Metro_station.JPG/960px-Swami_Vivekananda_Road_Metro_station.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Thalaghattapura":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Thalaghattapura_metro_station_%282025%29.jpg/960px-Thalaghattapura_metro_station_%282025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Trinity":"https://upload.wikimedia.org/wikipedia/commons/3/3b/Trinity_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","Vajarahalli":"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Vajarahalli_metro_station.jpg/960px-Vajarahalli_metro_station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Vijayanagar":"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Vijayanagar_metro_station_%282023%29.jpg/960px-Vijayanagar_metro_station_%282023%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Whitefield (Kadugodi)":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Whitefield_%28Kadugodi%29_metro_station_%28Mar_%2725%29.jpg/960px-Whitefield_%28Kadugodi%29_metro_station_%28Mar_%2725%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Yelachenahalli":"https://upload.wikimedia.org/wikipedia/commons/8/89/Yelachenahalli_Metro_Station.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"},"pl":{"Garuda Mall":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Bangalore_garuda_mall.jpg/960px-Bangalore_garuda_mall.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Bagmane Tech Park":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Bagmane_Tech_Park%2C_Bangalore_%282024%29_140.jpg/960px-Bagmane_Tech_Park%2C_Bangalore_%282024%29_140.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Orion Mall":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Orion_Mall%2C_Rajajinagar%2C_Bangalore_%282025%29_43.jpg/960px-Orion_Mall%2C_Rajajinagar%2C_Bangalore_%282025%29_43.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","Park Square Mall":"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/ITPL-Whitefield-Bangalore1.jpg/960px-ITPL-Whitefield-Bangalore1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","UB City":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/UBtowers.jpg/960px-UBtowers.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","VR Bengaluru":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/VR_Bengaluru.jpg/960px-VR_Bengaluru.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"}};</script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function toast(m) { var t = $("toast"); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(function () { t.hidden = true; }, 2600); }
+  var desk = window.matchMedia("(min-width: 1000px)");
+  function km2(a, b, c, d) { var dy = (c - a) * 111.32, dx = (d - b) * 111.32 * Math.cos(a * Math.PI / 180); return Math.sqrt(dx * dx + dy * dy); }
+
+  // ---------- data ----------
+  var LINES = window.METRO || [], PLACES = window.PLACES || [], PHOTOS = window.PHOTOS || { st: {}, pl: {} };
+  var COLORS = { purple: "#B65CE6", green: "#1DB563", yellow: "#F2C200" };
+  var LNAME = { purple: "Purple Line", green: "Green Line", yellow: "Yellow Line" };
+  // Illustrative service pattern (minutes)
+  var SERVICE = { purple: { peak: 4, off: 8, first: "5:00 am", last: "11:00 pm" }, green: { peak: 5, off: 10, first: "5:00 am", last: "11:00 pm" }, yellow: { peak: 10, off: 15, first: "5:00 am", last: "11:00 pm" } };
+  LINES.forEach(function (l) { l.color = COLORS[l.id] || l.color; });
+  var STATIONS = [], byName = {};
+  LINES.forEach(function (l) {
+    l.stations.forEach(function (s) {
+      if (!byName[s.n]) { byName[s.n] = { name: s.n, lat: s.a, lng: s.o, lines: [] }; STATIONS.push(byName[s.n]); }
+      if (byName[s.n].lines.indexOf(l.id) < 0) byName[s.n].lines.push(l.id);
+    });
+  });
+  function ends(id) { var l = LINES.filter(function (x) { return x.id === id; })[0]; return [l.stations[0].n, l.stations[l.stations.length - 1].n]; }
+
+  var seed = 20261031;
+  function rnd() { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }
+  function between(a, b) { return a + rnd() * (b - a); }
+
+  var SPOTS = [];
+  function addSpot(o) {
+    var st = o.station, type = o.type;
+    var cap = o.cap || (type === "met" ? Math.round(between(60, 320)) : type === "com" ? Math.round(between(20, 140)) : Math.round(between(2, 12)));
+    var s = { id: SPOTS.length + 1, type: type, kind: o.kind, name: o.name, station: st, lat: o.lat, lng: o.lng, cap: cap,
+      free: o.free != null ? o.free : Math.round(cap * Math.pow(rnd(), 1.5)), photo: o.photo || null, real: !!o.real, slot: o.slot || null,
+      covered: type !== "pri" ? rnd() < 0.8 : rnd() < 0.45, ev: rnd() < (type === "com" ? 0.45 : 0.12), cctv: rnd() < 0.85, guard: type !== "pri" || rnd() < 0.4,
+      booked: Math.round(between(4, 70)) };
+    SPOTS.push(s); return s;
+  }
+  var KIND = { Mall: "Mall", Hotel: "Hotel", Cinema: "Cinema", "Tech park": "Tech park", Parking: "Parking lot", Apartments: "Apartment society" };
+  PLACES.forEach(function (p) {
+    var st = byName[p.s]; if (!st) return;
+    var pri = p.c === "Apartments";
+    addSpot({ station: st, type: pri ? "pri" : "com", kind: KIND[p.c] || p.c, name: pri ? p.n + " · visitor slots" : p.n, lat: p.a, lng: p.o, photo: PHOTOS.pl[p.n] || null, real: true });
+  });
+  // Metro lots (simulated sizes). ParkEz only operates where the station is short of parking.
+  // Huskur Road really has no parking; Electronic City's lot is mostly two-wheelers, so cars are short.
+  STATIONS.forEach(function (st) {
+    var hasLot = st.name !== "Huskur Road" && (st.name === "Electronic City" || rnd() < 0.7);
+    st.lotCap = 0;
+    if (hasLot) {
+      var d = between(0.05, 0.12), b = rnd() * 6.283;
+      var lot = addSpot({ station: st, type: "met", kind: "Metro-run lot", name: st.name + " metro parking", lat: st.lat + d * Math.cos(b) / 111.32, lng: st.lng + d * Math.sin(b) / (111.32 * Math.cos(st.lat * Math.PI / 180)) });
+      st.lotCap = lot.cap;
+    }
+    st.gap = st.lotCap < 150 || st.name === "Electronic City";
+    st.gapWhy = !hasLot ? "No metro parking at this station" : st.name === "Electronic City" ? "Metro lot is mostly two-wheelers; car parking is short" : "Only " + st.lotCap + " metro spots for a busy station";
+  });
+  // The ad's spot: Mr. Rao's slot near Electronic City
+  (function () { var st = byName["Electronic City"]; if (!st) return; addSpot({ station: st, type: "pri", kind: "Apartment slot", name: "Rao's slot · B-204", slot: "B-204", lat: st.lat + 1.2 / 111.32 * 0.6, lng: st.lng + 1.2 / (111.32 * Math.cos(st.lat * Math.PI / 180)) * 0.8, cap: 1, free: 1 }); })();
+
+  // Pay per use only. Metro lots are never booked or charged by ParkEz.
+  function price(s, h, veh) {
+    var car = veh === "car";
+    if (s.type === "met") return car ? 30 : 15;
+    if (h === "1") return car ? 20 : 10;
+    if (h === "2") return car ? 40 : 20;
+    return car ? 60 : 25;
+  }
+  function gateText(veh) { return veh === "car" ? "₹30 for 4 hrs (car)" : "₹15 for 4 hrs (two-wheeler)"; }
+
+  // ---------- edge-of-city destinations ----------
+  var EDGE = [
+    { id: "hoskote", name: "Hoskote", sub: "Industrial town, east", lat: 13.0707, lng: 77.7982, bus: "E-3", freq: 15 },
+    { id: "airport", name: "Kempegowda Airport", sub: "No metro yet · north", lat: 13.1989, lng: 77.7068, bus: "KIA airport bus", freq: 30, airport: true },
+    { id: "nelamangala", name: "Nelamangala", sub: "Highway town, north-west", lat: 13.0977, lng: 77.3933, bus: "NW-7", freq: 20 },
+    { id: "attibele", name: "Attibele", sub: "State border, south-east", lat: 12.7783, lng: 77.7710, bus: "S-12", freq: 15 },
+    { id: "bidadi", name: "Bidadi", sub: "Industrial area, south-west", lat: 12.7967, lng: 77.3858, bus: "SW-4", freq: 20 },
+    { id: "harohalli", name: "Harohalli", sub: "Industrial area, south", lat: 12.6800, lng: 77.4700, bus: "S-21", freq: 25 }
+  ];
+  EDGE.forEach(function (e) {
+    var best = null; STATIONS.forEach(function (s) { var d = km2(e.lat, e.lng, s.lat, s.lng); if (!best || d < best.d) best = { s: s, d: d }; });
+    e.term = best.s; e.dist = best.d;
+    var mid = [(e.lat + e.term.lat) / 2 + (e.lng - e.term.lng) * 0.12, (e.lng + e.term.lng) / 2 - (e.lat - e.term.lat) * 0.12];
+    e.path = [[e.term.lat, e.term.lng], mid, [e.lat, e.lng]];
+  });
+
+  // ---------- map ----------
+  var map = L.map("map", { zoomControl: false, attributionControl: true, maxZoom: 17 }).setView([12.97, 77.59], 12);
+  var ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/";
+  L.tileLayer(ESRI + "World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", { maxZoom: 17, maxNativeZoom: 16, attribution: 'Basemap © Esri · Metro, buildings © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · Photos: Wikipedia' }).addTo(map);
+  L.tileLayer(ESRI + "World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", { maxZoom: 17, maxNativeZoom: 16, opacity: .75, pane: "overlayPane" }).addTo(map);
+  var lineLayers = {}, busLayer = L.layerGroup().addTo(map), stnLayer = L.layerGroup().addTo(map), dotLayer = L.layerGroup().addTo(map), pinLayer = L.layerGroup(), ringLayer = L.layerGroup().addTo(map), trainLayer = L.layerGroup().addTo(map), destLayer = L.layerGroup().addTo(map);
+  var lineOn = { purple: true, green: true, yellow: true }, busOn = true;
+  LINES.forEach(function (l) {
+    var g = L.layerGroup();
+    l.tracks.forEach(function (t) { L.polyline(t, { color: "#000", weight: 9, opacity: .55, interactive: false }).addTo(g); });
+    l.tracks.forEach(function (t) { L.polyline(t, { color: l.color, weight: 5, opacity: .95, interactive: false }).addTo(g); });
+    g.addTo(map); lineLayers[l.id] = g;
+  });
+  EDGE.forEach(function (e) {
+    L.polyline(e.path, { color: "#FF8A3D", weight: 3, opacity: .85, dashArray: "8 7", interactive: false }).addTo(busLayer);
+    var m = L.circleMarker([e.lat, e.lng], { radius: 6, color: "#FF8A3D", weight: 2, fillColor: "#05070B", fillOpacity: 1 }).bindTooltip(e.name, { direction: "top", className: "stn-label" });
+    m.on("click", function () { go({ tab: "transit", view: "edge", edge: e.id }); }); m.addTo(busLayer);
+  });
+  var stnMarkers = STATIONS.map(function (st) {
+    var inter = st.lines.length > 1;
+    var m = L.circleMarker([st.lat, st.lng], { radius: inter ? 7 : (st.gap ? 6.5 : 5.5), color: inter ? "#EAF1FF" : COLORS[st.lines[0]], weight: 3, fillColor: st.gap ? "#2F7BFF" : "#05070B", fillOpacity: 1 });
+    m.bindTooltip(st.name + (st.gap ? " · ParkEz zone" : ""), { direction: "top", offset: [0, -6], className: "stn-label" });
+    m.on("click", function () { go({ tab: "park", view: "station", station: st.name }); });
+    m.st = st; return m;
+  });
+
+  var filt = { com: false, pri: false, cov: false, ev: false };
+  function spotVisible(s) {
+    if (!s.station.lines.some(function (l) { return lineOn[l]; })) return false;
+    if (s.type !== "met" && !s.station.gap) return false;
+    if (filt.com && !filt.pri && s.type !== "com") return false;
+    if (filt.pri && !filt.com && s.type !== "pri") return false;
+    if (filt.cov && !s.covered) return false;
+    if (filt.ev && !s.ev) return false;
+    return true;
+  }
+  function pinHtml(s) { return '<div class="pk ' + s.type + (s.free === 0 ? " none" : s.free <= 3 ? " low" : "") + (cur.spot === s ? " sel" : "") + '">P</div>'; }
+  function drawSpots() {
+    dotLayer.clearLayers(); pinLayer.clearLayers();
+    SPOTS.forEach(function (s) {
+      if (!spotVisible(s)) return;
+      var col = s.type === "com" ? "#2F7BFF" : s.type === "pri" ? "#22C3EE" : "#EAF1FF";
+      var d = L.circleMarker([s.lat, s.lng], { radius: 3.4, color: "#05070B", weight: 1, fillColor: s.free ? col : "#3a4558", fillOpacity: .95 });
+      d.on("click", function () { go({ tab: "park", view: "spot", spot: s.id }); }); d.addTo(dotLayer);
+      var p = L.marker([s.lat, s.lng], { icon: L.divIcon({ className: "", html: pinHtml(s), iconSize: [22, 22], iconAnchor: [11, 11] }), keyboard: false });
+      p.on("click", function () { go({ tab: "park", view: "spot", spot: s.id }); }); p.spot = s; p.addTo(pinLayer);
+    });
+    syncZoom();
+  }
+  function syncZoom() {
+    var z = map.getZoom();
+    if (z >= 14) { if (map.hasLayer(dotLayer)) map.removeLayer(dotLayer); if (!map.hasLayer(pinLayer)) pinLayer.addTo(map); }
+    else { if (map.hasLayer(pinLayer)) map.removeLayer(pinLayer); if (!map.hasLayer(dotLayer)) dotLayer.addTo(map); }
+    stnLayer.clearLayers(); stnMarkers.forEach(function (m) { if (m.st.lines.some(function (l) { return lineOn[l]; })) m.addTo(stnLayer); });
+  }
+  map.on("zoomend", syncZoom);
+
+  // ---------- simulated live trains + buses ----------
+  var trains = [], buses = [];
+  LINES.forEach(function (l) {
+    var pts = l.stations.map(function (s) { return [s.a, s.o]; }), n = Math.max(4, Math.round(pts.length / 4));
+    for (var i = 0; i < n; i++) trains.push({ line: l.id, pts: pts, pos: (i / n) * (pts.length - 1), dir: i % 2 ? 1 : -1, speed: between(.04, .07), m: L.circleMarker(pts[0], { radius: 5, color: l.color, weight: 3, fillColor: "#fff", fillOpacity: 1, interactive: false }) });
+  });
+  EDGE.forEach(function (e) { for (var i = 0; i < 2; i++) buses.push({ e: e, t: i * .5, dir: i ? -1 : 1, speed: between(.006, .01), m: L.marker(e.path[0], { icon: L.divIcon({ className: "", html: '<div class="bus"></div>', iconSize: [20, 14], iconAnchor: [10, 7] }), interactive: false, keyboard: false }) }); });
+  function along(path, t) { var segs = path.length - 1, x = Math.min(segs - 1e-6, t * segs), i = Math.floor(x), f = x - i, a = path[i], b = path[i + 1]; return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f]; }
+  function step() {
+    var run = 0;
+    trains.forEach(function (t) {
+      t.pos += t.dir * t.speed; if (t.pos >= t.pts.length - 1) { t.pos = t.pts.length - 1; t.dir = -1; } if (t.pos <= 0) { t.pos = 0; t.dir = 1; }
+      var i = Math.floor(t.pos), f = t.pos - i, a = t.pts[i], b = t.pts[Math.min(i + 1, t.pts.length - 1)];
+      t.m.setLatLng([a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f]);
+      if (lineOn[t.line]) { if (!trainLayer.hasLayer(t.m)) t.m.addTo(trainLayer); run++; } else if (trainLayer.hasLayer(t.m)) trainLayer.removeLayer(t.m);
+    });
+    var nb = 0;
+    buses.forEach(function (b) {
+      b.t += b.dir * b.speed; if (b.t >= 1) { b.t = 1; b.dir = -1; } if (b.t <= 0) { b.t = 0; b.dir = 1; }
+      b.m.setLatLng(along(b.e.path, b.t));
+      if (busOn) { if (!busLayer.hasLayer(b.m)) b.m.addTo(busLayer); nb++; } else if (busLayer.hasLayer(b.m)) busLayer.removeLayer(b.m);
+    });
+    $("live-n").textContent = run + " trains · " + nb + " buses"; $("k-trains").textContent = run; $("k-buses").textContent = nb;
+  }
+  setInterval(step, 600); step();
+
+  function isPeak() { var h = new Date().getHours(); return (h >= 8 && h < 11) || (h >= 17 && h < 20); }
+  function freq(id) { return isPeak() ? SERVICE[id].peak : SERVICE[id].off; }
+  function nextIn(id, salt) { var f = freq(id), m = new Date().getHours() * 60 + new Date().getMinutes(); var h = 0; for (var i = 0; i < salt.length; i++) h = (h * 31 + salt.charCodeAt(i)) % 997; return f - ((m + h) % f) || f; }
+
+  setInterval(function () {
+    for (var k = 0; k < 14; k++) { var s = SPOTS[Math.floor(Math.random() * SPOTS.length)]; if (s.slot) continue; var d = Math.random() < .55 ? -1 : 1; s.free = Math.max(0, Math.min(s.cap, s.free + d)); if (d < 0) s.booked++; }
+    refreshLive();
+  }, 3500);
+
+  // ---------- navigation with real back ----------
+  var cur = { tab: "park", view: "station", station: null, spot: null, edge: null, booking: null, sort: "near", veh: "car", dur: "day", ol: "all" };
+  var stack = [], bookings = [], hold = null, holdTimer = null;
+  var VIEWS = ["overview", "station", "spot", "pass", "transit", "edge", "bookings", "owners"];
+  var PARENT = { spot: "station", station: "overview", pass: "spot", edge: "transit" };
+  function snap() { return { tab: cur.tab, view: cur.view, station: cur.station && cur.station.name, spot: cur.spot && cur.spot.id, edge: cur.edge && cur.edge.id, booking: cur.booking }; }
+  function go(s, opts) {
+    opts = opts || {};
+    if (!opts.replace) { stack.push(snap()); try { history.pushState({ pz: stack.length }, ""); } catch (e) {} }
+    apply(s);
+  }
+  function back() {
+    if (stack.length) { try { history.back(); } catch (e) { popOne(); } return; }
+    var p = PARENT[cur.view];
+    if (p === "station" && cur.spot) go({ tab: "park", view: "station", station: cur.spot.station.name }, { replace: true });
+    else if (p) go({ tab: cur.tab, view: p, station: cur.station && cur.station.name, spot: cur.spot && cur.spot.id }, { replace: true });
+  }
+  function popOne() { if (!stack.length) return; apply(stack.pop()); }
+  window.addEventListener("popstate", function () { popOne(); });
+
+  function apply(s) {
+    if (cur.view === "pass" && s.view !== "pass" && hold && !hold.paid) releaseHold("Hold released.");
+    cur.tab = s.tab || cur.tab; cur.view = s.view;
+    if (s.station) cur.station = byName[s.station] || cur.station;
+    cur.spot = s.spot ? SPOTS[s.spot - 1] : (s.view === "spot" || s.view === "pass" ? cur.spot : null);
+    if (cur.spot && s.view === "spot") cur.station = cur.spot.station;
+    cur.edge = s.edge ? EDGE.filter(function (e) { return e.id === s.edge; })[0] : (s.view === "edge" ? cur.edge : null);
+    cur.booking = s.booking != null ? s.booking : null;
+    render();
+  }
+  function crumbText() {
+    return { overview: "Park · All stations", station: "Park · " + (cur.station ? cur.station.name : ""), spot: (cur.station ? cur.station.name : "") + " · Spot", pass: hold && !hold.paid ? "Confirm booking" : "Entry pass",
+      transit: "Transit", edge: "Transit · " + (cur.edge ? cur.edge.name : ""), bookings: "My trips", owners: "Owners" }[cur.view];
+  }
+  function render() {
+    VIEWS.forEach(function (v) { $("v-" + v).hidden = v !== cur.view; });
+    document.querySelectorAll(".tabs button").forEach(function (b) { if (b.dataset.tab === cur.tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+    $("chips").hidden = cur.tab !== "park";
+    var canBack = stack.length > 0 || !!PARENT[cur.view];
+    $("backbtn").hidden = !canBack; $("crumb").textContent = crumbText();
+    $("body").scrollTop = 0;
+    destLayer.clearLayers(); if (cur.view !== "station" && cur.view !== "spot" && cur.view !== "pass") ringLayer.clearLayers();
+    if (cur.view === "overview") renderOverview();
+    if (cur.view === "station") renderStation(true);
+    if (cur.view === "spot") renderSpot(true);
+    if (cur.view === "pass") renderPass();
+    if (cur.view === "transit") renderTransit();
+    if (cur.view === "edge") renderEdge();
+    if (cur.view === "bookings") renderBookings();
+    if (cur.view === "owners") renderOwners();
+    drawSpots(); updateBar(); layout();
+    if (!desk.matches) setSheet(cur.view === "spot" || cur.view === "pass" || cur.view === "edge" ? "full" : cur.view === "overview" || cur.view === "transit" || cur.view === "bookings" || cur.view === "owners" ? "tall" : "peek");
+  }
+  $("backbtn").addEventListener("click", back);
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = b.dataset.tab, v = { park: cur.station ? "station" : "overview", transit: "transit", bookings: "bookings", owners: "owners" }[t];
+      if (t === cur.tab && v === cur.view) return;
+      go({ tab: t, view: v, station: cur.station && cur.station.name });
+    });
+  });
+
+  // ---------- helpers ----------
+  function walk(d) { return Math.max(1, Math.round(d * 12.5)); }
+  function pills(st) { return st.lines.map(function (l) { return '<span class="linepill"><i style="background:' + COLORS[l] + '"></i>' + LNAME[l].toUpperCase() + "</span>"; }).join(""); }
+  function leftHtml(s) { return s.free === 0 ? '<span class="left none">Full</span>' : s.free <= 3 ? '<span class="left low">Only ' + s.free + " left</span>" : '<span class="left">' + s.free + " free</span>"; }
+  function thumb(s) { return '<span class="thumb ' + s.type + '">' + (s.photo ? '<img loading="lazy" src="' + esc(s.photo) + '" alt="">' : '<svg><use href="#i-' + s.type + '"/></svg>') + "</span>"; }
+  function stnPhoto(st) { return PHOTOS.st[st.name] || null; }
+  function nearby(st) { return SPOTS.filter(spotVisible).map(function (s) { return { s: s, d: km2(st.lat, st.lng, s.lat, s.lng) }; }).filter(function (x) { return x.d <= 2.0; }); }
+  function fit(bounds) {
+    if (desk.matches) map.flyToBounds(bounds, { padding: [50, 50], duration: .8 });
+    else { var sh = $("sheet").getBoundingClientRect().height, tp = $("top").getBoundingClientRect().height; map.flyToBounds(bounds, { paddingTopLeft: [16, tp + 10], paddingBottomRight: [16, Math.min(sh, window.innerHeight * .5) + 10], duration: .8 }); }
+  }
+  function ring(st) {
+    ringLayer.clearLayers();
+    var r2 = L.circle([st.lat, st.lng], { radius: 2000, color: "#2F7BFF", weight: 1.5, dashArray: "6 8", fillColor: "#2F7BFF", fillOpacity: .05, interactive: false }).addTo(ringLayer);
+    L.circle([st.lat, st.lng], { radius: 1000, color: "#EAF1FF", weight: 1.1, dashArray: "3 6", fill: false, interactive: false }).addTo(ringLayer);
+    return r2.getBounds();
+  }
+
+  // ---------- overview ----------
+  function renderOverview() {
+    var list = STATIONS.filter(function (st) { return (cur.ol === "all" ? st.lines.some(function (l) { return lineOn[l]; }) : st.lines.indexOf(cur.ol) > -1); })
+      .map(function (st) { var n = nearby(st).filter(function (x) { return x.s.type !== "met"; }); return { st: st, n: n.length, free: n.reduce(function (a, x) { return a + x.s.free; }, 0) }; })
+      .sort(function (a, b) { return (b.st.gap - a.st.gap) || b.free - a.free; });
+    $("ov-list").innerHTML = list.map(function (x) {
+      var ph = stnPhoto(x.st);
+      return '<button type="button" class="card" data-st="' + esc(x.st.name) + '"><span class="thumb met">' + (ph ? '<img loading="lazy" src="' + esc(ph) + '" alt="">' : '<svg><use href="#i-met"/></svg>') + '</span><span><span class="t">' + esc(x.st.name) + '</span><span class="m">' + x.st.lines.map(function (l) { return LNAME[l]; }).join(" · ") + '</span><span class="tags">' + (x.st.gap ? '<span class="tag best">PARKEZ ZONE</span><span class="tag">' + esc(x.st.gapWhy) + "</span>" : '<span class="tag">Enough metro parking</span>') + '</span></span><span class="r">' + (x.st.gap ? '<span class="price">' + x.free + '<small> free</small></span><span class="left">' + x.n + " spots</span>" : '<span class="left none">Metro lot only</span>') + "</span></button>";
+    }).join("");
+    map.flyToBounds(L.latLngBounds(STATIONS.map(function (s) { return [s.lat, s.lng]; })), { padding: [30, 30], duration: .8 });
+  }
+  $("ov-list").addEventListener("click", function (e) { var b = e.target.closest("[data-st]"); if (b) go({ tab: "park", view: "station", station: b.dataset.st }); });
+  document.querySelectorAll("[data-ol]").forEach(function (b) { b.addEventListener("click", function () { cur.ol = b.dataset.ol; document.querySelectorAll("[data-ol]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); }); renderOverview(); }); });
+
+  // ---------- station ----------
+  function renderStation(fly) {
+    var st = cur.station; if (!st) return;
+    $("stn-name").textContent = st.name; $("stn-lines").innerHTML = pills(st);
+    var ph = stnPhoto(st); $("stn-img").hidden = !ph; $("stn-credit").hidden = !ph; if (ph) $("stn-img").src = ph;
+    var b = ring(st); if (fly) fit(b);
+    $("s-next").textContent = nextIn(st.lines[0], st.name) + " min";
+    $("stn-note").hidden = false;
+    $("stn-note").innerHTML = st.gap ? "<span><b style=\"font-size:14px;color:var(--blue-2)\">ParkEz zone.</b> " + esc(st.gapWhy) + ". Book a spot in a nearby building instead.</span>"
+      : "<span><b style=\"font-size:14px;color:var(--text)\">Enough metro parking here.</b> ParkEz doesn't operate at this station. Live metro lot space is shown; pay at the gate.</span>";
+    renderList();
+  }
+  function renderList() {
+    var st = cur.station; if (!st) return;
+    var items = nearby(st).filter(function (x) { return st.gap || x.s.type === "met"; }), by = { near: function (a, b) { return a.d - b.d; }, cheap: function (a, b) { return price(a.s, "day", cur.veh) - price(b.s, "day", cur.veh) || a.d - b.d; }, free: function (a, b) { return b.s.free - a.s.free; } }[cur.sort];
+    items.sort(function (a, b) { return (a.s.free === 0) - (b.s.free === 0) || by(a, b); });
+    var avail = items.filter(function (x) { return x.s.free > 0 && x.s.type !== "met"; });
+    var best = avail.slice().sort(function (a, b) { return (price(a.s, "day", "car") + a.d * 10) - (price(b.s, "day", "car") + b.d * 10); })[0];
+    $("s-count").textContent = items.length; $("s-free").textContent = items.reduce(function (a, x) { return a + x.s.free; }, 0);
+    $("cards").innerHTML = items.length ? items.map(function (x) {
+      var s = x.s, tags = [];
+      if (best && best.s === s) tags.push('<span class="tag best">BEST VALUE</span>');
+      if (s.free > 0 && s.free / s.cap < .15) tags.push('<span class="tag hot">FILLING FAST</span>');
+      if (s.photo) tags.push('<span class="tag real">Photo</span>');
+      if (s.covered) tags.push('<span class="tag">Covered</span>');
+      if (s.ev) tags.push('<span class="tag">EV</span>');
+      return '<button type="button" class="card' + (s.free === 0 ? " full" : "") + '" data-spot="' + s.id + '">' + thumb(s) +
+        '<span><span class="t">' + esc(s.name) + '</span><span class="m">' + esc(s.kind) + " · " + x.d.toFixed(1) + " km · " + walk(x.d) + ' min walk</span><span class="tags">' + tags.join("") + "</span></span>" +
+        '<span class="r">' + (s.type === "met" ? '<span class="price">₹' + price(s, "day", cur.veh) + '<small>/4 hrs</small></span><span class="small muted">at gate</span>' : '<span class="price">₹' + price(s, "day", cur.veh) + '<small>/day</small></span>') + leftHtml(s) + "</span></button>";
+    }).join("") : '<p class="muted">No spots match these filters here. Remove a filter.</p>';
+  }
+  $("cards").addEventListener("click", function (e) { var b = e.target.closest("[data-spot]"); if (b) go({ tab: "park", view: "spot", spot: +b.dataset.spot }); });
+  document.querySelectorAll("[data-sort]").forEach(function (b) { b.addEventListener("click", function () { cur.sort = b.dataset.sort; document.querySelectorAll("[data-sort]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); }); renderList(); }); });
+
+  // ---------- spot ----------
+  function renderSpot(fly) {
+    var s = cur.spot; if (!s) return; var st = s.station, d = km2(st.lat, st.lng, s.lat, s.lng);
+    cur.station = st;
+    var ph = s.photo || stnPhoto(st);
+    $("d-img").hidden = !ph; if (ph) $("d-img").src = ph;
+    $("d-credit").hidden = !ph; $("d-credit").textContent = s.photo ? "Photo of this place · Wikipedia" : "Area photo: " + st.name + " station · Wikipedia";
+    $("d-type").textContent = { com: "COMMERCIAL", pri: "PRIVATE", met: "METRO LOT" }[s.type] + " · " + s.kind.toUpperCase();
+    $("d-name").textContent = s.name;
+    $("d-sub").textContent = d.toFixed(1) + " km · " + walk(d) + " min walk to " + st.name + " station";
+    var q = encodeURIComponent(s.name.replace(" · visitor slots", "").replace("Rao's slot · B-204", "apartment") + " near " + st.name + " metro Bengaluru");
+    $("d-photos").href = "https://www.google.com/maps/search/?api=1&query=" + q;
+    $("d-street").href = "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=" + s.lat.toFixed(5) + "," + s.lng.toFixed(5);
+    $("d-left").innerHTML = leftHtml(s); $("d-cap").textContent = s.cap + (s.cap === 1 ? " slot" : " spots total");
+    $("d-bar").className = "bar" + (s.free <= 3 ? " low" : ""); $("d-bar").firstChild.style.width = (s.cap ? Math.round((1 - s.free / s.cap) * 100) : 100) + "%";
+    $("d-booked").textContent = s.booked;
+    var isMet = s.type === "met";
+    $("dur").hidden = isMet; $("d-anchor").hidden = isMet; $("d-metro").hidden = !isMet;
+    $("d-gate").textContent = gateText(cur.veh);
+    $("d-rate").textContent = "₹" + price(s, "day", cur.veh) + "/day";
+    document.querySelectorAll("#dur button").forEach(function (b) { b.querySelector("small").textContent = "₹" + price(s, b.dataset.h, cur.veh); b.setAttribute("aria-pressed", String(b.dataset.h === cur.dur)); });
+    document.querySelectorAll(".veh button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.veh === cur.veh)); });
+    var f = []; if (s.covered) f.push("Covered"); if (s.ev) f.push("EV charging"); if (s.cctv) f.push("CCTV"); if (s.guard) f.push("Security");
+    if (isMet) { f.push("Run by the metro"); f.push("Live space only"); } else { f.push("QR entry"); f.push("Verified host"); f.push("Pay per use"); }
+    $("d-feat").innerHTML = f.map(function (x) { return '<span class="tag">' + x + "</span>"; }).join("");
+    $("d-trip").innerHTML = tripHtml(s, st, d);
+    if (fly) { ring(st); fit(L.latLngBounds([[s.lat, s.lng], [st.lat, st.lng]]).pad(.6)); }
+    updateBar();
+  }
+  function tripHtml(s, st, d) {
+    var l = st.lines[0], e = ends(l);
+    return '<div class="leg"><i style="background:' + (s.type === "com" ? "#2F7BFF" : s.type === "pri" ? "#0E9FC4" : "#3a4558") + '">P</i><div><b>Park at ' + esc(s.name) + "</b><span>QR entry · held till you arrive</span></div><em></em></div>" +
+      '<div class="leg"><i style="background:#3a4558">→</i><div><b>Walk to ' + esc(st.name) + "</b><span>" + d.toFixed(1) + " km</span></div><em>" + walk(d) + " min</em></div>" +
+      '<div class="leg"><i style="background:' + COLORS[l] + '">M</i><div><b>' + LNAME[l] + "</b><span>Every " + freq(l) + " min · towards " + esc(e[0]) + " or " + esc(e[1]) + "</span></div><em>in " + nextIn(l, st.name) + " min</em></div>";
+  }
+  document.querySelectorAll("#dur button").forEach(function (b) { b.addEventListener("click", function () { cur.dur = b.dataset.h; renderSpot(false); }); });
+  document.querySelectorAll(".veh button").forEach(function (b) { b.addEventListener("click", function () { cur.veh = b.dataset.veh; renderSpot(false); }); });
+
+  function durLabel(h) { return { "1": "1 hr", "2": "2 hrs", day: "Full day" }[h]; }
+  function updateBar() {
+    var bb = $("bookbar"), s = cur.spot;
+    if (!s || cur.view !== "spot" || s.type === "met") { bb.hidden = true; return; }
+    bb.hidden = false;
+    $("bb-price").textContent = "₹" + price(s, cur.dur, cur.veh);
+    $("bb-sub").textContent = durLabel(cur.dur) + " · " + (cur.veh === "car" ? "Car" : "Two-wheeler") + " · pay per use";
+    if (s.free === 0) { bb.classList.add("disabled"); $("bb-cta").textContent = "Full right now"; }
+    else { bb.classList.remove("disabled"); $("bb-cta").textContent = s.free <= 3 ? "Grab it before it's gone →" : "Hold this spot →"; }
+  }
+  $("bookbar").addEventListener("click", function () { startHold(cur.spot); });
+
+  // ---------- hold / pay / pass ----------
+  function startHold(s) {
+    if (!s || s.free === 0 || s.type === "met") return;
+    s.free--; s.booked++;
+    hold = { code: "PZ-" + Math.random().toString(36).slice(2, 7).toUpperCase(), s: s, veh: cur.veh, dur: cur.dur, total: price(s, cur.dur, cur.veh), until: Date.now() + 600000, paid: false };
+    clearInterval(holdTimer); holdTimer = setInterval(tick, 1000);
+    go({ tab: cur.tab, view: "pass", spot: s.id });
+  }
+  function releaseHold(msg) { if (!hold || hold.paid) return; clearInterval(holdTimer); hold.s.free = Math.min(hold.s.cap, hold.s.free + 1); hold = null; if (msg) toast(msg); refreshLive(); }
+  function tick() {
+    if (!hold || hold.paid) return clearInterval(holdTimer);
+    var ms = Math.max(0, hold.until - Date.now()), m = Math.floor(ms / 60000), sec = Math.floor(ms / 1000) % 60;
+    $("hold-t").textContent = m + ":" + (sec < 10 ? "0" : "") + sec;
+    if (!ms) { releaseHold("Hold expired. The spot went back on the map."); if (cur.view === "pass") back(); }
+  }
+  function renderPass() {
+    var h = cur.booking != null ? bookings[cur.booking] : hold;
+    if (!h) { $("pass-kv").innerHTML = ""; return; }
+    var s = h.s, st = s.station, d = km2(st.lat, st.lng, s.lat, s.lng);
+    $("held").hidden = h.paid; $("paid").hidden = !h.paid;
+    if (h.paid) drawQR(h.code); else tick();
+    $("pass-kv").innerHTML = "<dt>Booking</dt><dd>" + h.code + "</dd><dt>Spot</dt><dd>" + esc(s.name) + "</dd><dt>Near</dt><dd>" + esc(st.name) + " station</dd><dt>Time</dt><dd>" + durLabel(h.dur) + "</dd><dt>Vehicle</dt><dd>" + (h.veh === "car" ? "Car" : "Two-wheeler") + "</dd><dt>" + (h.paid ? "Paid" : "To pay") + "</dt><dd>₹" + h.total.toLocaleString("en-IN") + (h.paid ? " · UPI" : "") + "</dd>";
+    $("pass-trip").innerHTML = tripHtml(s, st, d);
+    $("cancel").textContent = h.paid ? "Cancel booking" : "Release spot";
+    ring(st); fit(L.latLngBounds([[s.lat, s.lng], [st.lat, st.lng]]).pad(.6));
+  }
+  $("pay").addEventListener("click", function () {
+    if (!hold) return; clearInterval(holdTimer); hold.paid = true; hold.at = new Date(); bookings.unshift(hold);
+    var idx = 0; hold = null; $("badge").textContent = bookings.length; $("badge").hidden = false;
+    go({ tab: "bookings", view: "pass", spot: bookings[0].s.id, booking: idx }, { replace: true });
+    toast("Paid ₹" + bookings[0].total.toLocaleString("en-IN") + " by UPI. Show the QR at entry.");
+  });
+  $("cancel").addEventListener("click", function () {
+    if (cur.booking != null) { var b = bookings.splice(cur.booking, 1)[0]; if (b) b.s.free = Math.min(b.s.cap, b.s.free + 1); $("badge").textContent = bookings.length; $("badge").hidden = !bookings.length; toast("Booking cancelled. Full refund to UPI."); go({ tab: "bookings", view: "bookings" }, { replace: true }); }
+    else { releaseHold("Spot released."); back(); }
+  });
+  $("go").addEventListener("click", function () { var h = cur.booking != null ? bookings[cur.booking] : hold, s = h ? h.s : cur.spot; if (s) window.open("https://www.google.com/maps/dir/?api=1&destination=" + s.lat.toFixed(5) + "," + s.lng.toFixed(5), "_blank", "noopener"); });
+
+  // ---------- transit ----------
+  function renderTransit() {
+    $("lines").innerHTML = LINES.map(function (l) {
+      var e = ends(l.id), sv = SERVICE[l.id], running = trains.filter(function (t) { return t.line === l.id; }).length;
+      return '<div class="lcard" style="margin-bottom:10px"><div class="hd"><b><i style="background:' + l.color + '"></i>' + l.name + '</b><span class="st-ok">● Running · ' + running + ' trains</span></div>' +
+        '<span class="small muted">' + esc(e[0]) + " ↔ " + esc(e[1]) + " · " + l.stations.length + " stations</span>" +
+        '<div class="freq"><div><b>' + sv.peak + ' min</b>peak</div><div><b>' + sv.off + ' min</b>off-peak</div><div><b>' + sv.first.replace(":00", "") + "–" + sv.last.replace(":00", "") + "</b>hours</div></div></div>";
+    }).join("");
+    $("dests").innerHTML = EDGE.map(function (e) {
+      return '<button type="button" class="dest" data-edge="' + e.id + '"><span class="ico">' + e.name.slice(0, 2).toUpperCase() + '</span><span><b>' + esc(e.name) + '</b><span>' + esc(e.sub) + " · metro ends " + e.dist.toFixed(0) + " km away at " + esc(e.term.name) + '</span></span><span class="left" style="color:var(--blue-2)">Plan →</span></button>';
+    }).join("");
+    map.flyToBounds(L.latLngBounds(EDGE.map(function (e) { return [e.lat, e.lng]; }).concat(STATIONS.map(function (s) { return [s.lat, s.lng]; }))), { padding: [30, 30], duration: .8 });
+  }
+  $("dests").addEventListener("click", function (e) { var b = e.target.closest("[data-edge]"); if (b) go({ tab: "transit", view: "edge", edge: b.dataset.edge }); });
+
+  function edgeSpot(e) {
+    var near = SPOTS.filter(function (s) { return s.free > 0 && spotVisible(s); }).map(function (s) { return { s: s, d: km2(e.term.lat, e.term.lng, s.lat, s.lng) }; }).filter(function (x) { return x.d <= 2; });
+    var pz = near.filter(function (x) { return x.s.type !== "met"; }).sort(function (a, b) { return a.d - b.d; })[0];
+    return pz || near.filter(function (x) { return x.s.type === "met"; })[0] || null;
+  }
+  function renderEdge() {
+    var e = cur.edge; if (!e) return;
+    var sp = edgeSpot(e), busMin = Math.round(e.dist * 2.6 + 6), autoMin = Math.round(e.dist * 2.2 + 4);
+    var auto = Math.round(36 + Math.max(0, e.dist - 2) * 18), cab = Math.round(80 + e.dist * 24), busFare = e.airport ? 300 : Math.min(40, Math.round(8 + e.dist * 1.5));
+    var nb = e.freq - (new Date().getMinutes() % e.freq) || e.freq;
+    $("e-name").textContent = e.name; $("e-sub").textContent = e.sub + " · " + e.dist.toFixed(1) + " km past " + e.term.name + " station";
+    $("e-cover").innerHTML = '<div><span>Metro reaches</span><b>' + esc(e.term.name) + '</b></div><div><span>Buses run</span><b>5 am – 11 pm</b></div><div><span>Parking at ' + esc(e.name) + '</span><b style="color:var(--red)">None guaranteed</b></div><div><span>After 11 pm</span><b>Auto or cab only</b></div>';
+    if (sp) {
+      var s = sp.s;
+      var met = s.type === "met";
+      $("e-spot").innerHTML = thumb(s) + '<span><span class="t">' + esc(s.name) + '</span><span class="m">' + (met ? "Metro lot · live space · pay at gate" : "Last guaranteed spot") + " · " + sp.d.toFixed(1) + " km from " + esc(e.term.name) + '</span></span><span class="r"><span class="price">₹' + price(s, "day", cur.veh) + "<small>" + (met ? "/4 hrs" : "/day") + "</small></span>" + leftHtml(s) + "</span>";
+      $("e-spot").dataset.spot = s.id; $("e-book").hidden = met;
+    } else { $("e-spot").innerHTML = '<span class="muted">No free spot near the last station right now.</span>'; $("e-book").hidden = true; }
+    var opts = [
+      { c: "#FF8A3D", g: "BUS", t: (e.airport ? "KIA airport bus" : "BMTC feeder " + e.bus), s: "Every " + e.freq + " min · next in " + nb + " min · " + busMin + " min ride", p: "₹" + busFare, best: !e.airport },
+      { c: "#2ED47A", g: "AUTO", t: "Auto rickshaw", s: "Book in app · " + autoMin + " min", p: "₹" + auto },
+      { c: "#5A9BFF", g: "CAB", t: "Cab", s: autoMin + " min · door to door", p: "₹" + cab, best: !!e.airport }
+    ];
+    $("e-opts").innerHTML = opts.map(function (o) { return '<div class="opt' + (o.best ? " best" : "") + '"><span class="ico" style="background:' + o.c + '">' + o.g + '</span><span><b>' + esc(o.t) + (o.best ? ' <span class="tag best">FASTEST VALUE</span>' : "") + '</b><span>' + esc(o.s) + '</span></span><span class="r"><b>' + o.p + '</b></span></div>'; }).join("");
+    destLayer.clearLayers(); ringLayer.clearLayers();
+    L.marker([e.lat, e.lng], { icon: L.divIcon({ className: "", html: '<div class="dpin"></div>', iconSize: [30, 30], iconAnchor: [15, 30] }) }).bindTooltip(e.name, { direction: "top", offset: [0, -28], className: "stn-label", permanent: true }).addTo(destLayer);
+    L.polyline(e.path, { color: "#FF8A3D", weight: 6, opacity: .95, interactive: false }).addTo(destLayer);
+    if (sp) L.polyline([[sp.s.lat, sp.s.lng], [e.term.lat, e.term.lng]], { color: "#EAF1FF", weight: 2, dashArray: "3 6", interactive: false }).addTo(destLayer);
+    var pts = [[e.lat, e.lng], [e.term.lat, e.term.lng]]; if (sp) pts.push([sp.s.lat, sp.s.lng]);
+    fit(L.latLngBounds(pts).pad(.25));
+  }
+  $("e-spot").addEventListener("click", function () { var id = +$("e-spot").dataset.spot; if (id) go({ tab: "park", view: "spot", spot: id }); });
+  $("e-book").addEventListener("click", function () { var id = +$("e-spot").dataset.spot; if (id) { cur.spot = SPOTS[id - 1]; startHold(cur.spot); } });
+
+  // ---------- bookings ----------
+  function renderBookings() {
+    var km = bookings.reduce(function (a, b) { return a + 12; }, 0);
+    $("b-n").textContent = bookings.length; $("b-km").textContent = km; $("b-co2").textContent = (km * .15).toFixed(1);
+    $("b-list").innerHTML = bookings.length ? bookings.map(function (b, i) {
+      return '<button type="button" class="card" data-bk="' + i + '">' + thumb(b.s) + '<span><span class="t">' + esc(b.s.name) + '</span><span class="m">' + durLabel(b.dur) + " · near " + esc(b.s.station.name) + " · " + b.code + '</span></span><span class="r"><span class="price">₹' + b.total.toLocaleString("en-IN") + '</span><span class="left">Active</span></span></button>';
+    }).join("") : '<p class="muted">No bookings yet. Find a spot in Park.</p>';
+  }
+  $("b-list").addEventListener("click", function (e) { var b = e.target.closest("[data-bk]"); if (b) { var i = +b.dataset.bk; go({ tab: "bookings", view: "pass", spot: bookings[i].s.id, booking: i }); } });
+
+  // ---------- owners ----------
+  var slots = [{ n: "Rao's slot · B-204", s: "Electronic City · Weekdays 9–7 · Live" }];
+  function renderOwners() { $("o-list").innerHTML = slots.map(function (x) { return '<div class="card" style="grid-template-columns:58px 1fr"><span class="thumb pri"><svg><use href="#i-pri"/></svg></span><span><span class="t">' + esc(x.n) + '</span><span class="m">' + esc(x.s) + "</span></span></div>"; }).join(""); }
+  $("list-form").addEventListener("submit", function (e) { e.preventDefault(); var a = $("o-addr").value.trim(); if (!a) return; slots.unshift({ n: a + ($("o-slot").value.trim() ? " · " + $("o-slot").value.trim() : ""), s: $("o-hours").value + " · Under review" }); e.target.reset(); renderOwners(); toast("Slot submitted. We'll verify it within 24 hours."); });
+
+  // ---------- live refresh ----------
+  function refreshLive() {
+    $("k-free").textContent = SPOTS.reduce(function (a, s) { return a + (spotVisible(s) ? s.free : 0); }, 0).toLocaleString("en-IN");
+    $("k-spots").textContent = SPOTS.filter(spotVisible).length;
+    if (cur.view === "station") { $("s-free").textContent = nearby(cur.station).filter(function (x) { return cur.station.gap || x.s.type === "met"; }).reduce(function (a, x) { return a + x.s.free; }, 0); }
+    if (cur.view === "spot" && cur.spot) { $("d-left").innerHTML = leftHtml(cur.spot); $("d-bar").firstChild.style.width = Math.round((1 - cur.spot.free / cur.spot.cap) * 100) + "%"; $("d-booked").textContent = cur.spot.booked; updateBar(); }
+    if (map.getZoom() >= 14) pinLayer.eachLayer(function (p) { p.setIcon(L.divIcon({ className: "", html: pinHtml(p.spot), iconSize: [22, 22], iconAnchor: [11, 11] })); });
+  }
+
+  // ---------- filters + search ----------
+  document.querySelectorAll("#chips .chip").forEach(function (c) {
+    c.addEventListener("click", function () {
+      var on = c.getAttribute("aria-pressed") !== "true";
+      if (c.dataset.line) {
+        if (!on && !Object.keys(lineOn).some(function (k) { return lineOn[k] && k !== c.dataset.line; })) { toast("Keep at least one line on"); return; }
+        lineOn[c.dataset.line] = on; if (on) lineLayers[c.dataset.line].addTo(map); else map.removeLayer(lineLayers[c.dataset.line]);
+      } else if (c.dataset.layer) { busOn = on; if (on) busLayer.addTo(map); else map.removeLayer(busLayer); }
+      else filt[c.dataset.f] = on;
+      c.setAttribute("aria-pressed", String(on));
+      drawSpots(); refreshLive(); if (cur.view === "station") renderList(); if (cur.view === "overview") renderOverview();
+    });
+  });
+  var q = $("q"), res = $("results");
+  q.addEventListener("input", function () {
+    var v = q.value.trim().toLowerCase(); if (!v) { res.hidden = true; return; }
+    var hits = STATIONS.filter(function (s) { return s.name.toLowerCase().indexOf(v) > -1; }).slice(0, 7);
+    var eh = EDGE.filter(function (e) { return e.name.toLowerCase().indexOf(v) > -1; });
+    res.innerHTML = hits.map(function (s) { return '<button type="button" data-st="' + esc(s.name) + '">' + s.lines.map(function (l) { return '<i style="width:9px;height:9px;border-radius:50%;background:' + COLORS[l] + ';display:inline-block"></i>'; }).join("") + "<span>" + esc(s.name) + "</span><small>" + nearby(s).length + " spots</small></button>"; }).join("") +
+      eh.map(function (e) { return '<button type="button" data-ed="' + e.id + '"><i style="width:9px;height:9px;border-radius:2px;background:#FF8A3D;display:inline-block"></i><span>' + esc(e.name) + "</span><small>edge-of-city trip</small></button>"; }).join("") ||
+      '<button type="button" disabled><span class="muted">No station found. Try Indiranagar, Electronic City, Hoskote.</span></button>';
+    res.hidden = false;
+  });
+  res.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-st],[data-ed]"); if (!b) return; q.value = ""; res.hidden = true; q.blur();
+    if (b.dataset.st) go({ tab: "park", view: "station", station: b.dataset.st }); else go({ tab: "transit", view: "edge", edge: b.dataset.ed });
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".search") && !e.target.closest("#results")) res.hidden = true; });
+
+  // ---------- sheet drag (phone) ----------
+  var sheet = $("sheet"), grab = $("grab");
+  function setSheet(state) { if (desk.matches) return; sheet.style.height = state === "full" ? "86vh" : state === "tall" ? "62vh" : state === "mini" ? "130px" : ""; sheet.dataset.state = state; }
+  (function () {
+    var y0 = 0, h0 = 0, moved = false, dragging = false;
+    grab.addEventListener("pointerdown", function (e) { if (desk.matches) return; dragging = true; moved = false; y0 = e.clientY; h0 = sheet.getBoundingClientRect().height; sheet.classList.add("dragging"); grab.setPointerCapture(e.pointerId); });
+    grab.addEventListener("pointermove", function (e) { if (!dragging) return; var dy = y0 - e.clientY; if (Math.abs(dy) > 4) moved = true; sheet.style.height = Math.min(window.innerHeight * .9, Math.max(110, h0 + dy)) + "px"; });
+    grab.addEventListener("pointerup", function () {
+      if (!dragging) return; dragging = false; sheet.classList.remove("dragging");
+      var h = sheet.getBoundingClientRect().height, vh = window.innerHeight;
+      if (!moved) { setSheet(sheet.dataset.state === "full" ? "peek" : "full"); return; }
+      setSheet(h > vh * .7 ? "full" : h > vh * .5 ? "tall" : h < vh * .28 ? "mini" : "peek");
+    });
+  })();
+  function layout() {
+    document.documentElement.style.setProperty("--top-h", Math.round($("top").getBoundingClientRect().height) + "px");
+    if (desk.matches) sheet.style.height = "";
+    setTimeout(function () { map.invalidateSize(); }, 60);
+  }
+  window.addEventListener("resize", layout);
+  if (desk.addEventListener) desk.addEventListener("change", function () { layout(); render(); });
+
+  $("logo").addEventListener("click", function () { $("splash").hidden = false; });
+  $("start").addEventListener("click", function () { $("splash").hidden = true; try { sessionStorage.setItem("pz3", "1"); } catch (e) {} render(); });
+  try { if (sessionStorage.getItem("pz3") || location.hash === "#app") $("splash").hidden = true; } catch (e) {}
+
+  function drawQR(seedStr) {
+    var c = $("qr"), x = c.getContext("2d"), N = 29, h = 7;
+    for (var i = 0; i < seedStr.length; i++) h = (h * 31 + seedStr.charCodeAt(i)) >>> 0;
+    function r() { h ^= h << 13; h >>>= 0; h ^= h >> 17; h ^= h << 5; h >>>= 0; return h / 4294967296; }
+    x.fillStyle = "#fff"; x.fillRect(0, 0, N, N); x.fillStyle = "#000";
+    for (var a = 0; a < N; a++) for (var b = 0; b < N; b++) if (r() > .52) x.fillRect(b, a, 1, 1);
+    [[0, 0], [N - 7, 0], [0, N - 7]].forEach(function (p) { x.fillStyle = "#fff"; x.fillRect(Math.max(p[0] - 1, 0), Math.max(p[1] - 1, 0), 9, 9); x.fillStyle = "#000"; x.fillRect(p[0], p[1], 7, 7); x.fillStyle = "#fff"; x.fillRect(p[0] + 1, p[1] + 1, 5, 5); x.fillStyle = "#000"; x.fillRect(p[0] + 2, p[1] + 2, 3, 3); });
+  }
+
+  // ---------- boot ----------
+  $("sp-spots").textContent = SPOTS.length;
+  cur.station = byName["Electronic City"] || STATIONS.filter(function (s) { return s.gap; })[0] || STATIONS[0];
+  map.setView([cur.station.lat, cur.station.lng], 14);
+  refreshLive();
+  var hs = (location.hash || "").replace("#", "").split("/");
+  if (hs[0] === "transit") { cur.tab = "transit"; cur.view = "transit"; }
+  else if (hs[0] === "edge" && hs[1]) { cur.tab = "transit"; cur.view = "edge"; cur.edge = EDGE.filter(function (e) { return e.id === hs[1]; })[0] || EDGE[0]; }
+  else if (hs[0] === "spot" && hs[1] === "rao") { cur.view = "spot"; cur.spot = SPOTS[SPOTS.length - 1]; cur.station = cur.spot.station; }
+  else if (hs[0] === "owners") { cur.tab = "owners"; cur.view = "owners"; }
+  if (hs[0] && hs[0] !== "app") $("splash").hidden = true;
+  render();
+})();
+</script>
+</body>
+</html>
